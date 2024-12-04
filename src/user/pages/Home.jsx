@@ -1,34 +1,33 @@
 import React from 'react';
 import UNav from '../components/UNav';
-import Banner from '../components/Banner';
 import Footer from '../components/Footer';
-import ThuqbaScheme from '../components/ThuqbaScheme';
 import KmccScheme from '../components/KmccScheme';
-import HeadOne from '../components/Head/HeadOne';
+import BannerTwoArea from '../components/banner/BannerTwoArea';
+import ServiceArea from '../components/service/ServiceArea';
 
 const Home = () => {
   return (
     <div className="relative">
       {/* Navigation */}
-      <div className="absolute top-0 w-full z-50">
-        <HeadOne/>
+      <div className="fixed top-0 w-full z-50">
         <UNav />
       </div>
+
+      {/* Add padding to ensure banner is fully visible */}
+      <div className="pt-[80px]"> {/* Adjust this value to match the height of the navbar */}
+        <BannerTwoArea />
+      </div>
+
+      <div>
+        <ServiceArea />
+      </div>
+
+      <div>
+        <KmccScheme />
+      </div>
       
-      {/* Banner */}
       <div>
-        <Banner />
-      </div>
-
-      <div>
-        <ThuqbaScheme/>
-      </div>
-
-      <div>
-        <KmccScheme/>
-      </div>
-      <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
