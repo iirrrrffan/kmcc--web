@@ -10,7 +10,7 @@ const Banner = () => {
           src={image}
           alt="Banner"
           className="object-cover w-full h-full"
-        />
+        />    
         {/* Overlay Section */}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-start p-6">
           <div className="text-left">
