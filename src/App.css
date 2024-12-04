@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-infinite {
+  animation: slide 15s linear infinite;
+  display: flex;
+  width: 300%; /* Adjust to fit three images */
+}
+

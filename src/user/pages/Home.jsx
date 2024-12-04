@@ -4,12 +4,14 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import ThuqbaScheme from '../components/ThuqbaScheme';
 import KmccScheme from '../components/KmccScheme';
+import HeadOne from '../components/Head/HeadOne';
 
 const Home = () => {
   return (
     <div className="relative">
       {/* Navigation */}
       <div className="absolute top-0 w-full z-50">
+        <HeadOne/>
         <UNav />
       </div>
       
