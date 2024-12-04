@@ -10,7 +10,7 @@ const Banner = () => {
           src={image}
           alt="Banner"
           className="object-cover w-full h-full"
-        />
+        />    
         {/* Overlay Section */}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-start p-6">
           <div className="text-left">
@@ -18,7 +18,7 @@ const Banner = () => {
               Connecting Communities
             </h2>
             <button className="px-6 py-3 bg-green-600 text-white text-lg font-medium rounded shadow-lg hover:bg-green-700 transition duration-300">
-              Learn More
+              Learn Moreeeee
             </button>
           </div>
         </div>

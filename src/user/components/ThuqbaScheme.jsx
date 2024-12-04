@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ThuqbaScheme = () => {
   return (
@@ -33,11 +34,13 @@ const ThuqbaScheme = () => {
         <p className="text-gray-600 text-center leading-relaxed">
           Already a member? Verify your membership status and stay connected with Thuqba.
         </p>
+        <Link to={"/log"}>
         <button
           className="w-full bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition duration-300 hover:translate-y-1 hover:shadow-lg"
         >
           Check Membership Status
         </button>
+        </Link>
       </div>
     </div>
   );
