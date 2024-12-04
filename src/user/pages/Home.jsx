@@ -4,6 +4,8 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import ThuqbaScheme from '../components/ThuqbaScheme';
 import KmccScheme from '../components/KmccScheme';
+import BannerTwoArea from '../components/banner/BannerTwoArea';
+import ServiceArea from '../components/service/ServiceArea';
 
 const Home = () => {
   return (
@@ -15,11 +17,13 @@ const Home = () => {
       
       {/* Banner */}
       <div>
-        <Banner />
+        {/* <Banner /> */}
+        <BannerTwoArea/>
       </div>
 
       <div>
-        <ThuqbaScheme/>
+        {/* <ThuqbaScheme/> */}
+        <ServiceArea/>
       </div>
 
       <div>
