@@ -4,7 +4,7 @@ const UNav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-green-700 bg-opacity-10 shadow-xl sticky top-0 z-50">
+    <nav className="bg-gray-700 bg-opacity-6 shadow-xl sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
@@ -23,13 +23,13 @@ const UNav = () => {
           <li>
             <a
               href="#home"
-              className="text-white hover:text-yellow-300 transition-all duration-300"
+              className="text-white hover:text-green-600 transition-all duration-300"
             >
               Home
             </a>
           </li>
           <li className="relative group">
-            <button className="text-white hover:text-yellow-300 transition-all duration-300 flex items-center">
+            <button className="text-white hover:text-green-600 transition-all duration-300 flex items-center">
               About
               <svg
                 className="w-5 h-5 ml-1 transform group-hover:rotate-180 transition-transform duration-300"
@@ -63,7 +63,7 @@ const UNav = () => {
           <li>
             <a
               href="#scheme-types"
-              className="text-white hover:text-yellow-300 transition-all duration-300"
+              className="text-white hover:text-green-600 transition-all duration-300"
             >
               Scheme Types
             </a>
@@ -71,7 +71,7 @@ const UNav = () => {
           <li>
             <a
               href="#objectives"
-              className="text-white hover:text-yellow-300 transition-all duration-300"
+              className="text-white hover:text-green-600 transition-all duration-300"
             >
               Objectives
             </a>
@@ -79,7 +79,7 @@ const UNav = () => {
           <li>
             <a
               href="#downloads"
-              className="text-white hover:text-yellow-300 transition-all duration-300"
+              className="text-white hover:text-green-600 transition-all duration-300"
             >
               Downloads
             </a>
@@ -87,7 +87,7 @@ const UNav = () => {
           <li>
             <a
               href="#contact"
-              className="text-white hover:text-yellow-300 transition-all duration-300"
+              className="text-white hover:text-green-600 transition-all duration-300"
             >
               Contact
             </a>

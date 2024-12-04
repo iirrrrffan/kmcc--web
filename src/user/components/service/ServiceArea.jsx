@@ -21,7 +21,7 @@ const ServiceArea = () => {
               <div className="service__icon absolute top-0 left-0 p-4 bg-white rounded-full shadow-md transform -translate-y-1/2">
                 <img
                   src="assets/images/icon/service1.png"
-                  alt="Kids Education Icon"
+                  alt="ger icon"
                   className="w-12 h-12"
                 />
               </div>

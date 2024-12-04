@@ -1,10 +1,11 @@
 import React from "react";
+// import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules"; // Import Zoom module
+import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade"; // Import fade effect styles
-import "swiper/css/zoom"; // Import zoom effect styles
+import "swiper/css/effect-fade";
+import "swiper/css/zoom";
 
 const BannerTwoArea = () => {
   const slides = [
@@ -16,14 +17,14 @@ const BannerTwoArea = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade, Zoom]} // Added Zoom module
+        modules={[Autoplay, Pagination, EffectFade, Zoom]}
         autoplay={{ delay: 5000 }}
         pagination={{ clickable: true }}
         loop
-        effect="fade" // Enable fade effect
+        effect="fade"
         zoom
-        zoomMax={3} // Maximum zoom scale
-        zoomMin={1} // Minimum zoom scale
+        zoomMax={3}
+        zoomMin={1}
         className="h-full"
       >
         {slides.map((slide, index) => (
@@ -32,18 +33,29 @@ const BannerTwoArea = () => {
               className="absolute inset-0 bg-cover bg-center transition-all duration-1000 animate-zoom-in"
               style={{ backgroundImage: `url(${slide})` }}
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-              <h4 className="text-2xl md:text-4xl font-bold mb-4">
-                Change The World Together
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-6">
+              <h4
+                className="text-xl md:text-3xl font-semibold uppercase tracking-wide mb-4 text-gray-200"
+                data-animation="fadeInUp"
+                data-delay=".3s"
+              >
+                Uniting Hearts, Empowering Communities
               </h4>
-              <h1 className="text-3xl md:text-6xl font-extrabold mb-8 text-center">
-                Support Kids & Elders <br /> Give Generously
+              <h1
+                className="text-4xl md:text-7xl font-extrabold text-center leading-tight mb-8 text-shadow-lg"
+                data-animation="fadeInUp"
+                data-delay=".5s"
+              >
+                Fostering Culture, Care, and
+                <br />
+                Development Worldwide
               </h1>
+
               <a
                 href="cause-single.html"
-                className="bg-primary px-8 py-4 rounded-lg text-white font-semibold text-lg shadow-lg hover:bg-opacity-90 transition"
+                className="bg-primary px-10 py-4 rounded-full text-white font-semibold text-lg shadow-lg hover:bg-opacity-90 hover:scale-110 transition-transform duration-300 animate-bounce-slow"
               >
-                DONATE NOW
+                READ MORE
               </a>
             </div>
           </SwiperSlide>
