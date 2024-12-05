@@ -38,3 +38,18 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
   }
+
+
+  /* In your global CSS or Tailwind CSS file */
+.swiper-pagination-bullet {
+  background-color: rgb(213, 238, 213) !important; /* Make dots red */
+  width: 12px; /* Adjust size */
+  height: 12px;
+  opacity: 0.8; /* Adjust opacity */
+  transition: transform 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.2); /* Enlarge the active dot */
+  background-color: green !important; /* Active dot color */
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-
+import { faFacebookF, faTwitter, faLinkedinIn, faPinterestP } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const HeadOne = () => {
   return (
-    <div className="bg-heading-color py-4 hidden lg:block">
-      <div className="container mx-auto flex justify-between items-center">
+    <div className="bg-[#252525] py-4 hidden lg:block">
+      <div className="container w-10/12 mx-auto flex justify-between items-center">
         <ul className="flex space-x-8 text-white">
           <li className="flex items-center space-x-2">
             <svg
@@ -20,7 +21,7 @@ const HeadOne = () => {
                 fill="white"
               />
             </svg>
-            <a href="#0" className="hover:text-primary text-sm">
+            <a href="#0" className="hover:text-primary  text-sm">
               info@example.com
             </a>
           </li>
@@ -40,39 +41,39 @@ const HeadOne = () => {
           </li>
         </ul>
         <ul className="flex space-x-4">
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9"
-            >
-              <i className="fa-brands fa-facebook-f"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9"
-            >
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9"
-            >
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9"
-            >
-              <i className="fa-brands fa-pinterest-p"></i>
-            </a>
-          </li>
-        </ul>
+      <li>
+        <a
+          href="#0"
+          className="text-white hover:text-primary text-center w-9"
+        >
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+      </li>
+      <li>
+        <a
+          href="#0"
+          className="text-white hover:text-primary text-center w-9"
+        >
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+      </li>
+      <li>
+        <a
+          href="#0"
+          className="text-white hover:text-primary text-center w-9"
+        >
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+      </li>
+      <li>
+        <a
+          href="#0"
+          className="text-white hover:text-primary text-center w-9"
+        >
+          <FontAwesomeIcon icon={faPinterestP} />
+        </a>
+      </li>
+    </ul>
       </div>
     </div>
   );
