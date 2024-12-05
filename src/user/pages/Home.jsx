@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import KmccScheme from '../components/KmccScheme';
 import BannerTwoArea from '../components/banner/BannerTwoArea';
 import ServiceArea from '../components/service/ServiceArea';
+import HeadOne from '../components/Head/HeadOne';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
