@@ -1,6 +1,7 @@
 import React from "react";
+// import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules"; // Import Zoom module
+import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade"; // Import fade effect styles
@@ -17,11 +18,11 @@ const BannerTwoArea = () => {
   return (
     <section className="relative h-[70vh] sm:h-screen w-full overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade, Zoom]} // Added Zoom module
+        modules={[Autoplay, Pagination, EffectFade, Zoom]}
         autoplay={{ delay: 5000 }}
         pagination={{ clickable: true,color:'red' }}
         loop
-        effect="fade" // Enable fade effect
+        effect="fade"
         zoom
         className="h-full"
       >
