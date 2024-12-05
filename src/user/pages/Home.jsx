@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import UNav from '../components/UNav';
 import Footer from '../components/Footer';
 import KmccScheme from '../components/KmccScheme';
@@ -6,10 +6,27 @@ import BannerTwoArea from '../components/banner/BannerTwoArea';
 import ServiceArea from '../components/service/ServiceArea';
 
 const Home = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className="relative">
       {/* Navigation */}
-      <div className="fixed top-0 w-full z-50">
+        <HeadOne/>
+        <div
+        className={`top-0 w-full z-50 fixed transition-all duration-300 sm:mt-0 ${
+          isScrolled ? "mt-0" : "lg:mt-14"
+        }`}
+      >
         <UNav />
       </div>
 
