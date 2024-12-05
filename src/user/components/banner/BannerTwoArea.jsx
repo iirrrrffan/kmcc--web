@@ -42,7 +42,7 @@ const BannerTwoArea = () => {
                 Uniting Hearts, Empowering Communities
               </h4>
               <h1
-                className="text-4xl md:text-7xl font-extrabold text-center leading-tight mb-8 text-shadow-lg"
+                className="text-4xl md:text-4xl font-extrabold text-center leading-tight mb-8 text-shadow-lg"
                 data-animation="fadeInUp"
                 data-delay=".5s"
               >
