@@ -5,6 +5,7 @@ import KmccScheme from '../components/KmccScheme';
 import BannerTwoArea from '../components/banner/BannerTwoArea';
 import ServiceArea from '../components/service/ServiceArea';
 import HeadOne from '../components/Head/HeadOne';
+
 import AboutKmcc from '../components/AboutKmcc';
 import AboutHimaya from '../components/AboutHimaya';
 
