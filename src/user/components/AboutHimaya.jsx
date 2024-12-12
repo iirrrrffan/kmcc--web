@@ -27,11 +27,29 @@ const AboutHimaya = () => {
   }, []);
 
   return (
-    <div id="about-himaya" className="bg-gradient-to-b from-green-100 via-blue-50 to-blue-100 py-16 px-8">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl p-12 relative overflow-hidden">
+    <div
+      id="about-himaya"
+      className="relative py-16 px-8 overflow-hidden"
+      style={{
+        background: `linear-gradient(135deg, #e3f2fd, #bbdefb)`,
+        minHeight: '100vh',
+      }}
+    >
+      {/* Decorative Elements */}
+      <div
+        className="absolute top-[-20%] left-[-10%] w-96 h-96 bg-blue-300 rounded-full blur-2xl opacity-70"
+      ></div>
+      <div
+        className="absolute top-[20%] right-[-15%] w-80 h-80 bg-pink-200 rounded-full blur-3xl opacity-50"
+      ></div>
+      <div
+        className="absolute bottom-[-15%] left-[10%] w-96 h-96 bg-yellow-200 rounded-full blur-2xl opacity-60"
+      ></div>
+
+      <div className="max-w-6xl mx-auto bg-gradient-to-r from-white to-blue-50 rounded-3xl shadow-2xl p-12 relative z-10">
         {/* Heading */}
         <motion.h1
-          className="text-5xl font-extrabold text-blue-700 text-center mb-8"
+          className="text-6xl font-extrabold text-blue-700 text-center mb-8 tracking-tight"
           initial={{ opacity: 0, y: -50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
@@ -41,7 +59,7 @@ const AboutHimaya = () => {
 
         {/* Quote */}
         <motion.p
-          className="text-xl text-gray-700 font-medium mb-6 text-center"
+          className="text-2xl text-gray-700 font-medium mb-6 text-center"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -74,7 +92,7 @@ const AboutHimaya = () => {
 
         {/* Image Section with Zoom Animation */}
         <motion.div
-          className="overflow-hidden rounded-2xl bg-black mt-8"
+          className="overflow-hidden rounded-3xl bg-black mt-8"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={inView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 1.5, ease: 'easeOut' }}
