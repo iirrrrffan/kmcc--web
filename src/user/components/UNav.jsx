@@ -13,9 +13,10 @@ const UNav = () => {
             alt="KMCC Logo"
             className="w-14 h-14 rounded-full border-4 border-white shadow-md"
           />
-          <span className="text-black text-3xl font-extrabold tracking-wider">
-            KMCC
-          </span>
+         <span className="bg-gradient-to-r from-green-800 to-green-400 text-transparent bg-clip-text text-4xl font-extrabold tracking-wide drop-shadow-lg">
+  KMCC
+</span>
+
         </div>
 
         {/* Desktop Navigation Links */}
