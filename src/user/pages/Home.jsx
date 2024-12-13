@@ -5,9 +5,11 @@ import KmccScheme from '../components/KmccScheme';
 import BannerTwoArea from '../components/banner/BannerTwoArea';
 import ServiceArea from '../components/service/ServiceArea';
 import HeadOne from '../components/Head/HeadOne';
-
 import AboutKmcc from '../components/AboutKmcc';
 import AboutHimaya from '../components/AboutHimaya';
+import Content1 from '../contents/Content1';
+import Content2 from '../contents/Content2';
+import Content3 from '../contents/Content3';
 
 const Home = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -38,22 +40,27 @@ const Home = () => {
   return (
     <div className="relative">
       {/* Top Bar and Navbar */}
+      <HeadOne />
       <div
-        className={`top-0 w-full z-50 fixed transition-transform duration-300 ${
+        className={`top-0 w-full z-50 fixed transition-transform duration-300 pt-[54px] ${
           isScrollingUp ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <HeadOne />
+        
         <UNav />
+        
       </div>
 
       {/* Content */}
-      <div className="pt-[140px]"> {/* Adjust padding to account for HeadOne + Navbar height */}
+      <div >
         <BannerTwoArea />
       </div>
 
       <div>
         <AboutKmcc/>
+      </div>
+      <div>
+        <Content1/>
       </div>
    <div>
         <AboutHimaya/>
@@ -63,6 +70,12 @@ const Home = () => {
       </div>
       <div>
         <KmccScheme />
+      </div>
+      <div>
+        <Content2/>
+      </div>
+      <div>
+        <Content3/>
       </div>
       <div>
         <Footer />

@@ -1,6 +1,4 @@
 import React from 'react';
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const HeadOne = () => {
   return (
@@ -34,34 +32,6 @@ const HeadOne = () => {
                   +208-6666-0112
                 </span>
               </span>
-            </a>
-          </li>
-        </ul>
-
-        {/* Social Icons */}
-        <ul className="flex space-x-4">
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9 group relative"
-            >
-              <FontAwesomeIcon
-                icon={faFacebookF}
-                className="text-xl transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-110"
-              />
-              <span className="absolute inset-0 bg-blue-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#0"
-              className="text-white hover:text-primary text-center w-9 group relative"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-xl transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-110"
-              />
-              <span className="absolute inset-0 bg-pink-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
             </a>
           </li>
         </ul>
