@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const AboutKmcc = () => {
   const [inView, setInView] = useState(false);
@@ -43,47 +44,31 @@ const AboutKmcc = () => {
               About KMCC
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The Kerala Muslim Cultural Centre (KMCC) is a non-profit organization committed to serving the expatriate community.
+              The Kerala Muslim Cultural Centre (KMCC) is a global organization serving expatriates.
             </p>
           </motion.div>
 
-          {/* Image and Text Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left Section: Image */}
-            <motion.div
-  className="overflow-hidden rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 hidden md:block" // Hidden on mobile, visible on medium screens and larger
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.9 }}
-  transition={{ duration: 1.5, ease: 'easeOut' }}
->
-  <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJGNyZfdDUazyaauvplXjRZnqaL6urSN5zA&s"
-    alt="KMCC Image"
-    className="w-full h-auto rounded-lg shadow-lg"
-  />
-</motion.div>
-
-            {/* Right Section: Text Content */}
-            <motion.div
-              className="space-y-6 text-gray-700"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-              transition={{ duration: 1.5, ease: 'easeOut' }}
+          {/* Text Section with Read More Button */}
+          <motion.div
+            className="space-y-6 text-gray-700 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+          >
+            <p className="text-lg font-medium text-green-600">
+              KMCC: The world's largest organization for expats.
+            </p>
+            <p className="text-lg leading-relaxed">
+              Established in 1981, KMCC has made a significant impact on the welfare of expatriates from Kerala.
+            </p>
+            <Link to={"/overview"}>
+            <button
+              className="mt-6 px-6 py-2 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition-colors"
             >
-              <p className="text-lg font-medium text-green-600">
-                KMCC: The world's largest organization for expats.
-              </p>
-              <p className="text-lg leading-relaxed">
-                KMCC, formed in 1981, is a global non-profit organization working to improve the welfare of expatriates from Kerala. The center has had a significant impact, providing community support and cultural enrichment to expatriates.
-              </p>
-              <p className="text-lg leading-relaxed">
-                With branches across the Middle East, KMCC continues to provide services ranging from education and healthcare to social and cultural programs. It is driven by a commitment to uplift the lives of the expatriate community.
-              </p>
-              <p className="text-lg leading-relaxed">
-                KMCC's global reach and volunteer-driven initiatives make it a beacon of hope and solidarity for many.
-              </p>
-            </motion.div>
-          </div>
+              Read More
+            </button>
+            </Link>
+          </motion.div>
 
           {/* Decorative Background Circles */}
           <motion.div
