@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const UNav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-xl sticky top-0 z-50 text-black">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center space-x-4">
-          <img
-            src="/kmcc-logo.png" // Replace with your logo path
-            alt="KMCC Logo"
-            className="w-14 h-14 rounded-full border-4 border-white shadow-md"
-          />
-          <span className="text-black text-3xl font-extrabold tracking-wider">
-            KMCC
-          </span>
-        </div>
+    <nav className="bg-white bg-opacity-10 shadow-xl sticky top-0 z-50 text-black backdrop-blur-lg rounded-full py-2 px-6">
+      <div className="container mx-auto flex justify-center items-center">
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold">
           <li>
             <a
               href="#home"
-              className="text-black hover:text-yellow-300 transition-all duration-300"
+              className="text-black hover:text-green-700 transition-all duration-300"
             >
               Home
             </a>
           </li>
           <li className="relative group">
-            <button className="text-black hover:text-yellow-300 transition-all duration-300 flex items-center">
+            <button className="text-black hover:text-green-700 transition-all duration-300 flex items-center">
               About
               <svg
                 className="w-5 h-5 ml-1 transform group-hover:rotate-180 transition-transform duration-300"
@@ -46,12 +36,14 @@ const UNav = () => {
               </svg>
             </button>
             <div className="absolute top-full left-0 bg-green-800 bg-opacity-10 shadow-xl rounded-md mt-3 w-56 opacity-0 group-hover:opacity-80 group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
-              <a
-                href="#overview"
-                className="block px-4 py-3 text-black hover:bg-green-600 rounded-t-md"
-              >
-                Overview
-              </a>
+              <Link to={"/overview"}>
+                <a
+                  href="#overview"
+                  className="block px-4 py-3 text-black hover:bg-green-600 rounded-t-md"
+                >
+                  Overview
+                </a>
+              </Link>
               <a
                 href="#thuqba"
                 className="block px-4 py-3 text-black hover:bg-green-600 rounded-b-md"
@@ -63,7 +55,7 @@ const UNav = () => {
           <li>
             <a
               href="#scheme-types"
-              className="text-black hover:text-yellow-300 transition-all duration-300"
+              className="text-black hover:text-green-700 transition-all duration-300"
             >
               Scheme Types
             </a>
@@ -71,7 +63,7 @@ const UNav = () => {
           <li>
             <a
               href="#objectives"
-              className="text-black hover:text-yellow-300 transition-all duration-300"
+              className="text-black hover:text-green-700 transition-all duration-300"
             >
               Objectives
             </a>
@@ -79,7 +71,7 @@ const UNav = () => {
           <li>
             <a
               href="#downloads"
-              className="text-black hover:text-yellow-300 transition-all duration-300"
+              className="text-black hover:text-green-700 transition-all duration-300"
             >
               Downloads
             </a>
@@ -87,7 +79,7 @@ const UNav = () => {
           <li>
             <a
               href="#contact"
-              className="text-black hover:text-yellow-300 transition-all duration-300"
+              className="text-black hover:text-green-700 transition-all duration-300"
             >
               Contact
             </a>
@@ -95,7 +87,7 @@ const UNav = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden" >
           <button
             className="text-green-600 focus:outline-none"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
