@@ -1,7 +1,6 @@
 import React from "react";
-// import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules"; // Import Zoom module
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade"; // Import fade effect styles
@@ -18,11 +17,11 @@ const BannerTwoArea = () => {
   return (
     <section className="relative h-[70vh] sm:h-screen w-full overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade, Zoom]}
+        modules={[Autoplay, Pagination, EffectFade, Zoom]} // Added Zoom module
         autoplay={{ delay: 5000 }}
         pagination={{ clickable: true,color:'red' }}
         loop
-        effect="fade"
+        effect="fade" // Enable fade effect
         zoom
         className="h-full"
       >
@@ -42,30 +41,31 @@ const BannerTwoArea = () => {
               }}
             >
               <motion.h4
-                className="text-2xl md:text-4xl hidden lg:block font-bold mb-4 animate__animated animate__fadeInUp"
+                className="text-2xl md:text-4xl hidden lg:block font-bold mb-4 animate_animated animate_fadeInUp"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Change The World Together
+               Welcome to KMCC Thuqbah
               </motion.h4>
               <motion.h1
-                className="text-3xl md:text-6xl font-extrabold mb-8 text-center animate__animated animate__fadeInUp"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-              >
-                Support Kids & Elders <br /> Give Generously
-              </motion.h1>
-              <motion.a
-                href="cause-single.html"
-                className="bg-[#1d7522] px-8 py-4 rounded-lg text-white font-semibold text-lg shadow-lg hover:bg-opacity-90 transition transform hover:scale-105"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-              >
-                Check Status
-              </motion.a>
+  className="text-3xl md:text-6xl font-light mb-8 text-center animate_animated animate_fadeInUp"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5 }}
+>
+  Connecting Malayali hearts <br /> with culture and care.
+</motion.h1>
+<motion.a
+  href="cause-single.html"
+  className="bg-[#1d7522] px-8 py-4 rounded-lg text-white font-semibold text-lg shadow-lg hover:bg-opacity-90 transition transform hover:scale-105"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.7 }}
+>
+  Read More
+</motion.a>
+
             </motion.div>
           </SwiperSlide>
         ))}

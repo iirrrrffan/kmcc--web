@@ -8,6 +8,8 @@ import Dashboard from './admin/pages/Dashboard';
 import UsersList from './admin/pages/UsersList';
 import ExpiredUsers from './admin/pages/ExpiredUsers';
 import EditUsers from './admin/pages/EditUsers';
+import Overview from './user/pages/Overview';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
+          <Route path='overview' element={<Overview/>}/>
 
 
           <Route path='/adminlogin' element={<Login />} />
