@@ -3,7 +3,7 @@ export const UserDetailsModal = ({ user, onClose }) => {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-green-500 p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-4xl h-auto sm:h-[600px] overflow-hidden flex flex-col">
+            <div className="bg-green-400 p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-4xl h-auto sm:h-[600px] overflow-hidden flex flex-col">
                 <button
                     className="absolute top-4 right-4 text-white hover:text-gray-300"
                     onClick={onClose}
