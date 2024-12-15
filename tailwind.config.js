@@ -9,6 +9,18 @@ export default {
       animation: {
         'zoom-in': 'zoomIn 5s ease-in-out', // Define the zoom-in animation
         'fadeInUp': 'fadeInUp 1.5s ease-out', // Define the fade-in-up animation
+        'zoom-in': 'zoomIn 5s ease-in-out', // Define the zoom-in animation // Define the zoom-out animation
+        'fadeInUp': 'fadeInUp 1.5s ease-out', 
+      },
+      fadeInUp: {
+        '0%': {
+          opacity: '0',
+          transform: 'translateY(20px)',
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'translateY(0)',
+        },
       },
       keyframes: {
         zoomIn: {

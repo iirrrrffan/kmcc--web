@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Home from './user/pages/Home'
+import Home from './user/pages/Home';
 import CheckHimaya from './user/pages/CheckHimaya';
 import Login from './admin/pages/Login';
 import Dashboard from './admin/pages/Dashboard';
@@ -10,7 +10,6 @@ import ExpiredUsers from './admin/pages/ExpiredUsers';
 import EditUsers from './admin/pages/EditUsers';
 
 function App() {
-
   return (
     <>
       <div>
@@ -25,11 +24,10 @@ function App() {
           <Route path='/expiredusers' element={<ExpiredUsers />} />
           <Route path='/edit/:id' element={<EditUsers />} />
         </Routes>
-        <ToastContainer position="top-center" autoClose='500' />
+        <ToastContainer position="top-center" autoClose={500} />
       </div>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
