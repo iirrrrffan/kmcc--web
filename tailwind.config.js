@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       animation: {
-        'zoom-in': 'zoomIn 5s ease-in-out', // Define the zoom-in animation
-        'fadeInUp': 'fadeInUp 1.5s ease-out', // Define the fade-in-up animation
-        'zoom-in': 'zoomIn 5s ease-in-out', // Define the zoom-in animation // Define the zoom-out animation
+        'zoom-in': 'zoomIn 5s ease-in-out', 
+        'fadeInUp': 'fadeInUp 1.5s ease-out', 
+        'zoom-in': 'zoomIn 5s ease-in-out', 
         'fadeInUp': 'fadeInUp 1.5s ease-out', 
       },
       fadeInUp: {

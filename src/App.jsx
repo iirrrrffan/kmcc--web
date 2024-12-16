@@ -8,6 +8,7 @@ import Dashboard from './admin/pages/Dashboard';
 import UsersList from './admin/pages/UsersList';
 import ExpiredUsers from './admin/pages/ExpiredUsers';
 import EditUsers from './admin/pages/EditUsers';
+import AddUser from './admin/pages/AddUser';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/admin/dashboard' element={<Dashboard />} />
           <Route path='/admin/users' element={<UsersList />} />
           <Route path='/expiredusers' element={<ExpiredUsers />} />
+          <Route path='/admin/adduser' element={<AddUser />} />
           <Route path='/edit/:id' element={<EditUsers />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />

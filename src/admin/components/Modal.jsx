@@ -25,7 +25,7 @@ export const UserDetailsModal = ({ user, onClose }) => {
                                     <strong className="mr-2 w-[180px]">Membership Number</strong>: <div>{user.MembershipNumber}</div>
                                 </div>
                                 <div className="flex">
-                                    <strong className="mr-2 w-[180px]">Status</strong>: <div>{user.HimayaStatus}</div>
+                                    <strong className="mr-2 w-[180px]">Himaya Status</strong>: <div>{user.HimayaStatus}</div>
                                 </div>
                                 <div className="flex">
                                     <strong className="mr-2 w-[180px]">Central Committee</strong>: <div>{user.CentralCommittee}</div>

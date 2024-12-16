@@ -4,6 +4,7 @@ import SideBar from '../components/Sidebar';
 import { UserDetailsModal } from '../components/Modal';
 import { FiEdit, FiTrash, FiEye } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UsersList = () => {
     const [users, setUsers] = useState([]);
@@ -60,8 +61,9 @@ const UsersList = () => {
         try {
             await adminInstance.delete(`/admin/user/${userId}`);
             setUsers(users.filter(user => user._id !== userId));
+            toast.success(`User deleted successfully`);
         } catch (error) {
-            console.error("Error deleting user:", error);
+            toast.error("Error deleting user:", error);
         }
     };
 

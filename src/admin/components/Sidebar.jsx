@@ -5,16 +5,16 @@ import { toast } from 'react-toastify';
 
 const SideBar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const Nvgt= useNavigate()
+    const Nvgt = useNavigate()
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
     };
 
     const handleLogout = () => {
-     localStorage.removeItem('adminToken')
-     Nvgt('/adminlogin')
-     toast.success(`Logout Success`)
+        localStorage.removeItem('adminToken')
+        Nvgt('/adminlogin')
+        toast.success(`Logout Success`)
     };
 
     return (
@@ -26,7 +26,7 @@ const SideBar = () => {
                 <FaBars />
             </button>
             <div
-                className={`fixed top-0 left-0 w-64 h-screen bg-gradient-to-b from-green-900 to-green-700 text-white flex flex-col shadow-lg transform ${isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed top-0 left-0 w-64 h-screen bg-gradient-to-b from-green-800 to-green-700 text-white flex flex-col shadow-lg transform ${isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300 ease-in-out z-40`}
             >
                 <div className="p-4 text-2xl font-bold border-b border-green-600 flex items-center justify-center">
@@ -47,7 +47,7 @@ const SideBar = () => {
                             </NavLink>
                         </li>
                         <li className="mb-6">
-                            <NavLink to="/adduser" className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
+                            <NavLink to='/admin/adduser' className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
                                 <FaUsers className="mr-3 text-lg" />
                                 <span className="text-lg">Add User</span>
                             </NavLink>
