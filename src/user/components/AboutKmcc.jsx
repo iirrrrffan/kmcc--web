@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const AboutKmcc = () => {
   const [inView, setInView] = useState(false);
@@ -15,7 +15,7 @@ const AboutKmcc = () => {
       { threshold: 0.5 }
     );
 
-    const section = document.getElementById('about-kmcc');
+    const section = document.getElementById("about-kmcc");
     if (section) {
       observer.observe(section);
     }
@@ -30,59 +30,58 @@ const AboutKmcc = () => {
   return (
     <>
       {/* Section Start */}
-      <section id="about-kmcc" className="relative py-24 bg-white">
-        <div className="global-container">
-
+      <section
+        id="about-kmcc"
+        className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-black overflow-hidden"
+      >
+        <div className="global-container relative z-10 px-6 md:px-12 lg:px-20">
           {/* Title */}
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h2 className="text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-serif font-extrabold text-white mb-6 tracking-wider drop-shadow-lg">
               About KMCC
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The Kerala Muslim Cultural Centre (KMCC) is a global organization serving expatriates.
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light italic">
+              The Kerala Muslim Cultural Centre (KMCC) is a global organization
+              dedicated to uplifting expatriates across the world.
             </p>
           </motion.div>
 
-          {/* Text Section with Read More Button */}
+          {/* Main Content */}
           <motion.div
-            className="space-y-6 text-gray-700 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="text-center space-y-8 mx-auto max-w-4xl"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <p className="text-lg font-medium text-green-600">
-              KMCC: The world's largest organization for expats.
+            {/* Highlighted Quote */}
+            <p className="text-3xl font-semibold text-green-400 drop-shadow-md font-serif">
+              "KMCC: The world's largest expat welfare community."
             </p>
-            <p className="text-lg leading-relaxed">
-              Established in 1981, KMCC has made a significant impact on the welfare of expatriates from Kerala.
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+              Established in{" "}
+              <span className="text-green-400 font-bold">1981</span>, KMCC has
+              transformed the lives of countless expatriates by offering
+              community, security, and empowerment.
             </p>
+
+            {/* Button */}
             <Link to={"/overview"}>
-            <button
-              className="mt-6 px-6 py-2 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition-colors"
-            >
-              Read More
-            </button>
+              <motion.button
+                className="relative px-12 py-4 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-110 duration-300 ease-in-out uppercase tracking-wider"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Learn More
+              </motion.button>
             </Link>
           </motion.div>
-
-          {/* Decorative Background Circles */}
-          <motion.div
-            className="absolute top-0 left-0 w-24 h-24 bg-green-500 rounded-full opacity-20 blur-xl"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1.2 }}
-            transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
-          />
-          <motion.div
-            className="absolute bottom-0 right-0 w-24 h-24 bg-green-500 rounded-full opacity-20 blur-xl"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1.2 }}
-            transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: 0.5 }}
-          />
         </div>
       </section>
       {/* Section End */}
