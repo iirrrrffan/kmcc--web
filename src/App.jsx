@@ -12,6 +12,7 @@ import AddUser from './admin/pages/AddUser';
 import Signup from './admin/pages/SignUp';
 import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
+import Overview from './user/pages/Overview';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
-
+          <Route path='/' element={<Home />} />
+          <Route path='log' element={<CheckHimaya />} />
+          <Route path='overview' element={<Overview />} />
 
           <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />
