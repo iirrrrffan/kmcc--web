@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaUsers, FaTachometerAlt, FaClock, FaSignOutAlt } from 'react-icons/fa';
+import { FaBars, FaUsers, FaTachometerAlt, FaClock, FaSignOutAlt, FaPlus, FaUserShield } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -13,6 +13,7 @@ const SideBar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('adminToken')
+        localStorage.removeItem('adminId')
         Nvgt('/adminlogin')
         toast.success(`Logout Success`)
     };
@@ -48,7 +49,7 @@ const SideBar = () => {
                         </li>
                         <li className="mb-6">
                             <NavLink to='/admin/adduser' className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
-                                <FaUsers className="mr-3 text-lg" />
+                                <FaPlus className="mr-3 text-lg" />
                                 <span className="text-lg">Add User</span>
                             </NavLink>
                         </li>
@@ -56,6 +57,12 @@ const SideBar = () => {
                             <NavLink to="/expiredusers" className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
                                 <FaClock className="mr-3 text-lg" />
                                 <span className="text-lg">Expired Users</span>
+                            </NavLink>
+                        </li>
+                        <li className="mb-6">
+                            <NavLink to="/admins" className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
+                                <FaUserShield className="mr-3 text-lg" />
+                                <span className="text-lg">Admin List</span>
                             </NavLink>
                         </li>
                         <li className="mb-6">

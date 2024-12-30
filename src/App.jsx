@@ -9,6 +9,9 @@ import UsersList from './admin/pages/UsersList';
 import ExpiredUsers from './admin/pages/ExpiredUsers';
 import EditUsers from './admin/pages/EditUsers';
 import AddUser from './admin/pages/AddUser';
+import Signup from './admin/pages/SignUp';
+import AdminList from './admin/pages/AdminList';
+import UpdateProfile from './admin/pages/UpdateProfile';
 
 function App() {
   return (
@@ -19,12 +22,15 @@ function App() {
           <Route path='/log' element={<CheckHimaya />} />
 
 
+          <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />
           <Route path='/admin/dashboard' element={<Dashboard />} />
           <Route path='/admin/users' element={<UsersList />} />
           <Route path='/expiredusers' element={<ExpiredUsers />} />
           <Route path='/admin/adduser' element={<AddUser />} />
           <Route path='/edit/:id' element={<EditUsers />} />
+          <Route path='/admins' element={<AdminList />} />
+          <Route path='/profile' element={<UpdateProfile />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />
       </div>

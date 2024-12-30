@@ -81,7 +81,7 @@ const UsersList = () => {
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-9">
                         {users.map((user) => (
                             <div key={user._id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                                 <div className="flex flex-col items-center">
@@ -113,7 +113,6 @@ const UsersList = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
                 {isModalOpen && <UserDetailsModal user={selectedUser} onClose={closeModal} />}
             </div>

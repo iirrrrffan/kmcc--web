@@ -16,9 +16,11 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await adminInstance.post('/admin/login', { email, password });
-      const { token, message } = response.data;
+
+      const { token, message, data } = response.data;
 
       localStorage.setItem('adminToken', token);
+      localStorage.setItem('adminId', data);
 
       toast.success(message, { position: 'top-center' });
       setLoading(false);
@@ -32,7 +34,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-green-50" style={{ backgroundImage: 'url(https://i.pinimg.com/originals/d0/42/7b/d0427bf0fa38cf5d3151c68825bea9d5.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="w-full max-w-md p-10 bg-white rounded-2xl shadow-xl shadow-green-200">
-        <h2 className="text-3xl font-extrabold text-center text-green-700 mb-8">Admin Login</h2>
+        <h2 className="text-3xl font-extrabold text-center text-green-700 mb-8">Login</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-gray-700">Email</label>
@@ -67,6 +69,17 @@ const Login = () => {
           >
             {loading ? 'Logging in...' : 'Login'}
           </button>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Don't have an account?
+              <button
+                onClick={() => Nvgt('/adminregister')}
+                className="ml-2 text-green-700 font-semibold hover:text-green-600"
+              >
+                Sign Up
+              </button>
+            </p>
+          </div>
         </form>
       </div>
     </div>
