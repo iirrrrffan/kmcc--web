@@ -15,6 +15,7 @@ const UpdateProfile = () => {
     const [newImage, setNewImage] = useState(null);
     const [previewImage, setPreviewImage] = useState(null);
 
+    
     const handleImageClick = () => {
         if (fileInputRef.current) {
             fileInputRef.current.click();
