@@ -1,12 +1,11 @@
 import React from "react";
-// import "animate.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade, Zoom } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade"; // Import fade effect styles
-import "swiper/css/zoom"; // Import zoom effect styles
-import { motion } from "framer-motion"; // Add framer-motion for additional text animations
+import "swiper/css/effect-fade";
+import "swiper/css/zoom";
+import { motion } from "framer-motion";
 
 const BannerTwoArea = () => {
   const slides = [
@@ -20,7 +19,7 @@ const BannerTwoArea = () => {
       <Swiper
         modules={[Autoplay, Pagination, EffectFade, Zoom]}
         autoplay={{ delay: 5000 }}
-        pagination={{ clickable: true,color:'red' }}
+        pagination={{ clickable: true }}
         loop
         effect="fade"
         zoom
@@ -33,7 +32,7 @@ const BannerTwoArea = () => {
               style={{ backgroundImage: `url(${slide})` }}
             />
             <motion.div
-              className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 md:px-12"
+              className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 md:px-12 bg-gradient-to-t from-black/60 via-black/30 to-transparent"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -42,29 +41,29 @@ const BannerTwoArea = () => {
               }}
             >
               <motion.h4
-                className="text-2xl md:text-4xl hidden lg:block font-bold mb-4 animate__animated animate__fadeInUp"
+                className="text-2xl md:text-4xl hidden lg:block font-semibold mb-4 tracking-wide uppercase drop-shadow-lg animate_animated animate_fadeInUp"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Change The World Together
+                Welcome to KMCC Thuqbah
               </motion.h4>
               <motion.h1
-                className="text-3xl md:text-6xl font-extrabold mb-8 text-center animate__animated animate__fadeInUp"
+                className="text-3xl md:text-6xl font-light italic mb-6 text-center tracking-wide leading-snug animate_animated animate_fadeInUp drop-shadow-md"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Support Kids & Elders <br /> Give Generously
+                Connecting Malayali Hearts <br /> With Culture and Care
               </motion.h1>
               <motion.a
                 href="cause-single.html"
-                className="bg-[#1d7522] px-8 py-4 rounded-lg text-white font-semibold text-lg shadow-lg hover:bg-opacity-90 transition transform hover:scale-105"
+                className="bg-gradient-to-r from-green-700 to-green-900 px-8 py-3 rounded-full text-white font-medium text-base shadow-lg hover:opacity-90 hover:scale-105 transition-all tracking-wide uppercase"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
               >
-                Check Status
+                Read More
               </motion.a>
             </motion.div>
           </SwiperSlide>
