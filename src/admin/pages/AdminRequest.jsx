@@ -40,7 +40,7 @@ const PendingAdmins = () => {
                                 <tr>
                                     <th className="px-6 py-3 text-left">Name</th>
                                     <th className="px-6 py-3 text-left">Email</th>
-                                    <th className="px-6 py-3 text-center">Actions</th>
+                                    <th className="px-6 py-3 text-center"></th>
                                 </tr>
                             </thead>
                             <tbody>
