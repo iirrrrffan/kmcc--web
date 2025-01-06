@@ -54,7 +54,7 @@ const PendingAdmins = () => {
                                                     className="bg-green-500 text-white px-4 py-2 rounded-md mr-4 mb-4 sm:mb-0 hover:bg-green-600 focus:outline-none transition-colors text-xs sm:text-sm md:text-base"
                                                     onClick={() => handleApprove(admin._id)}
                                                 >
-                                                    Approve
+                                                    Accept
                                                 </button>
                                                 <button
                                                     className="bg-red-500 text-white px-4 py-2 rounded-md mr-4 sm:mr-0 hover:bg-red-600 focus:outline-none transition-colors text-xs sm:text-sm md:text-base"
