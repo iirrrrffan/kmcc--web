@@ -42,17 +42,17 @@ const AdminList = () => {
                 <div className="overflow-x-auto bg-white shadow-lg rounded-xl">
                     <table className="w-full text-gray-700">
                         <thead>
-                            <tr className="bg-green-600 text-white ">
-                                <th className="p-4 text-left font-semibold">#</th>
-                                <th className="p-4 text-left font-semibold">Name</th>
-                                <th className="p-4 text-left font-semibold">Email</th>
-                                <th className="p-4 text-left font-semibold"></th>
+                            <tr className="bg-green-600 text-white text-center">
+                                <th className="p-4 font-semibold">#</th>
+                                <th className="p-4 font-semibold">Name</th>
+                                <th className="p-4 font-semibold">Email</th>
+                                <th className="p-4 font-semibold"></th>
                             </tr>
                         </thead>
                         <tbody>
                             {Array.isArray(admins) && admins.length > 0 ? (
                                 admins.map((admin, index) => (
-                                    <tr key={admin._id} className="border-b hover:bg-green-50 font-sans">
+                                    <tr key={admin._id} className="border-b hover:bg-green-50 font-sans text-center">
                                         <td className="p-4">{index + 1}</td>
                                         <td className="p-4">{admin.name}</td>
                                         <td className="p-4">{admin.email}</td>

@@ -38,15 +38,15 @@ const PendingAdmins = () => {
                         <table className="min-w-full bg-white text-sm text-gray-600 table-auto sm:rounded-lg">
                             <thead className="bg-green-500 text-white">
                                 <tr>
-                                    <th className="px-6 py-3 text-left">Name</th>
-                                    <th className="px-6 py-3 text-left">Email</th>
+                                    <th className="px-6 py-3 text-center">Name</th>
+                                    <th className="px-6 py-3 text-center">Email</th>
                                     <th className="px-6 py-3 text-center"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {Array.isArray(pendingAdmins) && pendingAdmins.length > 0 ? (
                                     pendingAdmins.map((admin) => (
-                                        <tr key={admin._id} className="border-b border-gray-100 hover:bg-gray-50">
+                                        <tr key={admin._id} className="border-b border-gray-100 hover:bg-gray-50 text-center">
                                             <td className="px-6 py-4">{admin.name}</td>
                                             <td className="px-6 py-4">{admin.email}</td>
                                             <td className="px-6 py-4 text-center">
