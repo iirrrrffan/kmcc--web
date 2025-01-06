@@ -2,6 +2,7 @@ import React from "react";
 import image from "../../assets/frds.jpg"; // Replace with your actual image path
 import image2 from "../../assets/frds1.jpg"; // Replace with your actual image path
 import image3 from "../../assets/weer.jpg"; // Replace with your actual image path
+import { Link } from "react-router-dom";
 
 const CheckHimaya = () => {
   return (
@@ -65,12 +66,14 @@ const CheckHimaya = () => {
             </div>
 
             {/* Submit Button */}
+            <Link to={"/details"}>
             <button
               type="submit"
               className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:outline-none transition duration-300"
             >
               Check
             </button>
+            </Link>
           </form>
 
           {/* Help Section */}

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10">
+    <footer ref={ref} className="bg-gray-900 text-gray-300 py-10">
+      {/* Your existing footer content */}
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Quick Links */}
@@ -104,13 +105,12 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-gray-700 pt-6 text-center">
           <p className="text-sm text-gray-400 animate__animated animate__fadeIn animate__delay-0.8s">
-            © {new Date().getFullYear()} Your Company Name. All rights reserved.
+            © {new Date().getFullYear()} irfan. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
- 

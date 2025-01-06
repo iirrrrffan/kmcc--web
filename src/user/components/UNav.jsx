@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const UNav = () => {
+const UNav = ({ scrollToFooter }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -77,17 +77,17 @@ const UNav = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
+            <button
+              onClick={scrollToFooter}
               className="text-black hover:text-green-700 transition-all duration-300"
             >
               Contact
-            </a>
+            </button>
           </li>
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden" >
+        <div className="md:hidden">
           <button
             className="text-green-600 focus:outline-none"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
@@ -149,12 +149,12 @@ const UNav = () => {
           >
             Downloads
           </a>
-          <a
-            href="#contact"
+          <button
+            onClick={scrollToFooter}
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
           >
             Contact
-          </a>
+          </button>
         </div>
       )}
     </nav>

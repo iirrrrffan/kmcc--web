@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS CSS
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS CSS
 import image from "../../assets/frds.jpg";
+import { Link } from "react-router-dom";
 
 const AboutHimaya = () => {
   const [inView, setInView] = useState(false);
@@ -15,7 +16,7 @@ const AboutHimaya = () => {
       { threshold: 0.5 }
     );
 
-    const section = document.getElementById('about-himaya');
+    const section = document.getElementById("about-himaya");
     if (section) observer.observe(section);
 
     AOS.init({ duration: 1000 });
@@ -24,7 +25,10 @@ const AboutHimaya = () => {
   }, []);
 
   return (
-    <div id="about-himaya" className="relative py-16 px-6 sm:px-12 bg-gradient-to-b from-gray-900 to-black overflow-hidden">
+    <div
+      id="about-himaya"
+      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b from-black to-gray-900 overflow-hidden"
+    >
       {/* Background Layer */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-black overflow-hidden">
         {/* Subtle Glowing Circles */}
@@ -42,10 +46,10 @@ const AboutHimaya = () => {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-20">
         {/* Image Section */}
         <motion.div
-          className="overflow-hidden rounded-lg shadow-lg"
+          className="overflow-hidden rounded-lg shadow-lg flex items-center justify-center aspect-square lg:aspect-auto lg:h-full"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={inView ? { scale: 1, opacity: 1 } : {}}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           data-aos="zoom-in"
         >
           <img
@@ -56,50 +60,38 @@ const AboutHimaya = () => {
         </motion.div>
 
         {/* Content Section */}
-        <div className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center lg:text-left">
-          <motion.h1
-            className="text-4xl font-bold text-white mb-4"
-            initial={{ opacity: 0, y: -50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            data-aos="fade-up"
-          >
+        <motion.div
+          className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center lg:text-left flex flex-col justify-center h-full"
+          initial={{ opacity: 0, x: -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1.2 }}
+          data-aos="fade-up"
+        >
+          <h1 className="text-4xl font-bold text-white mb-4">
             About Himaya
-          </motion.h1>
-
-          <motion.p
-            className="text-lg text-gray-300 mb-4"
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 1.2 }}
-            data-aos="fade-up"
-          >
+          </h1>
+          <p className="text-lg text-gray-300 mb-4">
             <span className="font-semibold text-green-400">
               "Standing by families, always."
             </span>
-          </motion.p>
-
-          <motion.p
-            className="text-sm text-gray-400"
-            initial={{ opacity: 0, x: -100 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1, delay: 0.3 }}
-            data-aos="fade-left"
-          >
-            <strong>Himaya @ Thuqbah</strong> is a humanitarian initiative providing support to expatriate families in distress, covering essentials like food, education, and medical aid.
-          </motion.p>
-
+          </p>
+          <p className="text-sm text-gray-400">
+            <strong>Himaya @ Thuqbah</strong> is a humanitarian initiative undertaken by Thuqbah KMCC, . The
+program aims to provide member chikhilsa sahayam. Many expatriate families face
+immense hardship after the sudden demise of a family member, struggling to meet basic
+needs such as food, children's education, and medical expenses. "Himaya @ Tukhbah"
+seeks to alleviate the suffering of these families by providing them with necessary
+assistance."
+          </p>
           {/* Read More Button */}
           <div className="text-center mt-6">
-            <a
-              href="#"
-              className="inline-block px-6 py-3 bg-green-500 text-white font-medium rounded-lg shadow-md hover:bg-green-600 transition-transform transform duration-300 hover:scale-105"
-              data-aos="fade-up"
-            >
+            <Link to={"himaya"}>
+           <button className="inline-block px-6 py-3 bg-green-800 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition-transform transform duration-300 hover:scale-105">
               Read More
-            </a>
+              </button>
+              </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
