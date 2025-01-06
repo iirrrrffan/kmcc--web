@@ -13,6 +13,7 @@ import Signup from './admin/pages/SignUp';
 import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
 import Overview from './user/pages/Overview';
+import AdminRequest from './admin/pages/AdminRequest';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='/edit/:id' element={<EditUsers />} />
           <Route path='/admins' element={<AdminList />} />
           <Route path='/profile' element={<UpdateProfile />} />
+          <Route path="/admin/pending-requests" element={<AdminRequest />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />
       </div>
