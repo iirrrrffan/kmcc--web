@@ -1,70 +1,70 @@
-import React from "react";
-import image from "../../assets/frds.jpg"; // Replace with your actual image path
-import image2 from "../../assets/frds1.jpg"; // Replace with your actual image path
-import image3 from "../../assets/weer.jpg"; // Replace with your actual image path
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const CheckHimaya = () => {
+  const [identifier, setIdentifier] = useState(""); // Single input field for Iqama or Adhar
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    // Validation: Ensure the input field is not empty
+    if (!identifier) {
+      setError("Please enter your Iqama or Adhar Number.");
+      return;
+    }
+
+    try {
+      const response = await axios.post("http://localhost:4000/user/login", {
+        iqamaNumber: identifier, // Send the identifier as iqamaNumber
+        AdharNumber: identifier, // Also send the identifier as AdharNumber
+      });
+
+      if (response.data) {
+        const user = response.data.user;
+        // Navigate to UserDetails page with user data
+        navigate("/details", { state: { user } });
+      }
+    } catch (err) {
+      setError(err.response?.data?.error || "An error occurred. Please try again.");
+    }
+  };
+
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-green-500 to-green-800 overflow-hidden">
-      {/* Sliding Background */}
-      <div className="absolute inset-0 flex justify-center overflow-hidden">
-        <div className="w-full max-w-5xl flex animate-slide-infinite">
-          <img
-            src={image}
-            alt="Background 1"
-            className="w-full h-full object-cover opacity-30"
-          />
-          <img
-            src={image2}
-            alt="Background 2"
-            className="w-full h-full object-cover opacity-30"
-          />
-          <img
-            src={image3}
-            alt="Background 3"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-      </div>
-
-      {/* Foreground Form */}
-      <div className="relative flex max-w-3xl w-full bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden backdrop-filter backdrop-blur-lg z-10">
-        {/* Left Image Section */}
-        <div className="hidden md:flex flex-1 items-center justify-center bg-gray-50 bg-opacity-60 p-6">
-          <img
-            src={image}
-            alt="Himaya Check"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-        </div>
-
-        {/* Form Section */}
-        <div className="flex-1 p-6">
-          <h1 className="text-3xl font-bold text-center text-green-600 mb-4">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="flex-1 hidden md:block bg-gray-200"></div>
+        <div className="flex-1 p-8 flex flex-col justify-center bg-white">
+          <h1 className="text-3xl font-bold text-center text-green-600 mb-6">
             Check Himaya Status
           </h1>
           <p className="text-center text-gray-600 mb-6">
-            Enter your Iqama Number below to check your Himaya status.
+            Enter your Iqama or Adhar Number below to check your Himaya status.
           </p>
 
-          <form className="space-y-6">
-            {/* Iqama Number Input */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
-                htmlFor="iqamaNumber"
+                htmlFor="identifier"
                 className="block text-sm font-medium text-gray-700"
               >
-                Iqama Number
+                Iqama or Adhar Number
               </label>
               <input
                 type="text"
-                id="iqamaNumber"
-                placeholder="Enter your Iqama Number"
+                id="identifier"
+                value={identifier}
+                onChange={(e) => setIdentifier(e.target.value)}
+                placeholder="Enter your Iqama or Adhar Number"
                 className="mt-2 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-150"
               />
             </div>
 
-            {/* Submit Button */}
+            {error && <p className="text-red-600 text-center">{error}</p>}
+
             <button
               type="submit"
               className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:outline-none transition duration-300"
@@ -73,7 +73,6 @@ const CheckHimaya = () => {
             </button>
           </form>
 
-          {/* Help Section */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500">
               Need assistance?{" "}

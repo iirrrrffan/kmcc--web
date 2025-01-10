@@ -36,7 +36,7 @@ const Content1 = () => {
   return (
     <div className="relative py-12">
       {/* Background Layer */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-900 via-gray-800 to-black overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b bg-white  overflow-hidden">
         {/* Glowing Blurred Circles */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-green-500 opacity-20 blur-3xl rounded-full"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-500 opacity-20 blur-3xl rounded-full"></div>
@@ -61,10 +61,10 @@ const Content1 = () => {
             <SwiperSlide key={index}>
               <div className="flex flex-col items-center text-center p-6 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-500 hover:scale-105">
                 <div className="mb-4">{content.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   {content.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {content.description}
                 </p>
               </div>
