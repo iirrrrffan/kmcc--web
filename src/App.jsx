@@ -14,6 +14,7 @@ import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
 import Overview from './user/pages/Overview';
 import AdminRequest from './admin/pages/AdminRequest';
+import ImageUpload from './admin/pages/ImageUpload';
 
 function App() {
   return (
@@ -22,8 +23,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
-          <Route path='/' element={<Home />} />
-          <Route path='log' element={<CheckHimaya />} />
           <Route path='overview' element={<Overview />} />
 
           <Route path='/adminregister' element={<Signup />} />
@@ -36,6 +35,7 @@ function App() {
           <Route path='/admins' element={<AdminList />} />
           <Route path='/profile' element={<UpdateProfile />} />
           <Route path="/admin/pending-requests" element={<AdminRequest />} />
+          <Route path="/image/upload" element={<ImageUpload />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />
       </div>

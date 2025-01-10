@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaUsers, FaTachometerAlt, FaClock, FaSignOutAlt, FaPlus, FaUserShield,FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaUsers, FaTachometerAlt, FaClock, FaSignOutAlt, FaPlus, FaUserShield, FaEnvelope, FaImage } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -51,6 +51,12 @@ const SideBar = () => {
                             <NavLink to='/admin/adduser' className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
                                 <FaPlus className="mr-3 text-lg" />
                                 <span className="text-lg">Add User</span>
+                            </NavLink>
+                        </li>
+                        <li className="mb-6">
+                            <NavLink to="/image/upload" className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
+                                <FaImage className="mr-3 text-lg" />
+                                <span className="text-lg">Upload Images</span>
                             </NavLink>
                         </li>
                         <li className="mb-6">
