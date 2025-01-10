@@ -16,16 +16,19 @@ import Overview from './user/pages/Overview';
 import UserDetails from './user/pages/UserDetails';
 import Himaya from './user/pages/Himaya';
 import Gallery from './user/pages/Gallery';
+import AdminRequest from './admin/pages/AdminRequest';
+
 
 function App() {
   return (
     <>
       <div>
         <Routes>
+
+
+
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
-          <Route path='/' element={<Home />} />
-          <Route path='log' element={<CheckHimaya />} />
           <Route path='overview' element={<Overview />} />
           <Route path='details' element={<UserDetails/>}/>
           <Route path='himaya' element={<Himaya/>}/>
@@ -40,6 +43,9 @@ function App() {
           <Route path='/edit/:id' element={<EditUsers />} />
           <Route path='/admins' element={<AdminList />} />
           <Route path='/profile' element={<UpdateProfile />} />
+
+          <Route path="/admin/pending-requests" element={<AdminRequest />} />
+
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />
       </div>

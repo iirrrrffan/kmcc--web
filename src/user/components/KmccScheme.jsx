@@ -2,7 +2,7 @@ import React from "react";
 
 const KmccScheme = () => {
   return (
-    <div className="min-h-[40vh] bg-gradient-to-b from-black to-gray-900 flex items-center justify-center p-6">
+    <div className="min-h-[40vh] bg-gradient-to-b from-white to-green-900 flex items-center justify-center p-6">
       {/* Container: Schemes Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
         {/* Card: 1 */}

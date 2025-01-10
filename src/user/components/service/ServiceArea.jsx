@@ -9,10 +9,10 @@ const ServiceArea = () => {
   };
 
   return (
-    <section className="service-area py-24 bg-gradient-to-t from-black via-gray-900 to-gray-900">
+    <section className="service-area py-24 bg-gradient-to-t bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-16">
         {/* Title Section */}
-        <h2 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-800 to-green-500 mb-16 animate-gradient-move">
+        <h2 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-800 via-black to-green-800 mb-16 animate-gradient-move">
           Explore Our Premium Service
         </h2>
 
@@ -34,13 +34,17 @@ const ServiceArea = () => {
                   Ensure your loved ones in Riyadh are registered with KMCC and
                   enjoy exclusive benefits and services designed just for them.
                 </p>
-                <button
-                  onClick={handleNavigation}
-                  className="px-8 py-4 bg-gradient-to-r from-green-700 to-green-900 text-white font-medium rounded-full shadow-lg hover:from-green-600 hover:to-green-800 hover:shadow-[0_4px_20px_rgba(72,255,72,0.6)] transition-transform duration-300 transform hover:scale-110 flex items-center justify-center gap-3 animate-bounce-slow"
-                >
-                  <i className="fas fa-check-circle text-xl"></i>
-                  Check Membership Status
-                </button>
+
+                {/* Centered Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleNavigation}
+                    className="px-8 py-4 bg-gradient-to-r from-green-700 to-green-900 text-white font-medium rounded-full shadow-lg hover:from-green-600 hover:to-green-800 hover:shadow-[0_4px_20px_rgba(72,255,72,0.6)] transition-transform duration-300 transform hover:scale-110 flex items-center justify-center gap-3 animate-bounce-slow"
+                  >
+                    <i className="fas fa-check-circle text-xl"></i>
+                    Check Membership Status
+                  </button>
+                </div>
               </div>
             </div>
 

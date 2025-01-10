@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
-import image from "../../assets/frds.jpg";
+import image from "../../assets/WhatsApp Image 2024-12-27 at 7.23.10 PM.jpeg";
 import { Link } from "react-router-dom";
 
 const AboutHimaya = () => {
@@ -27,7 +27,7 @@ const AboutHimaya = () => {
   return (
     <div
       id="about-himaya"
-      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b from-black to-gray-900 overflow-hidden"
+      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b bg-white overflow-hidden"
     >
       {/* Background Layer */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-black overflow-hidden">
@@ -67,11 +67,11 @@ const AboutHimaya = () => {
           transition={{ duration: 1.2 }}
           data-aos="fade-up"
         >
-          <h1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl font-bold text-black mb-4">
             About Himaya
           </h1>
           <p className="text-lg text-gray-300 mb-4">
-            <span className="font-semibold text-green-400">
+            <span className="font-semibold text-green-600">
               "Standing by families, always."
             </span>
           </p>

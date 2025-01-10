@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import logo from "../../assets/WhatsApp Image 2024-12-27 at 7.23.10 PM.jpeg"; 
 
 const Footer = forwardRef((props, ref) => {
   return (

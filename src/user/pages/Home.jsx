@@ -16,7 +16,7 @@ import Committee from '../components/committee/Committee';
 const Home = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
-  const footerRef = useRef(null); // Reference for Footer
+  const footerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {

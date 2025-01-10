@@ -32,7 +32,7 @@ const AboutKmcc = () => {
       {/* Section Start */}
       <section
         id="about-kmcc"
-        className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-black overflow-hidden"
+        className="relative py-24 bg-gradient-to-b from-green-900 via-green-800 to-green overflow-hidden"
       >
         <div className="global-container relative z-10 px-6 md:px-12 lg:px-20">
           {/* Title */}
