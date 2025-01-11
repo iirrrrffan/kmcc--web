@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import SideBar from '../components/Sidebar';
 import { FaTrash } from 'react-icons/fa';
 import { FaFolderOpen } from 'react-icons/fa';
