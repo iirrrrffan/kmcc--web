@@ -9,39 +9,44 @@ const ServiceArea = () => {
   };
 
   return (
-    <section className="service-area py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700">
+    <section className="service-area py-24 bg-gradient-to-t bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-16">
-        {/* Title Section */}
-        <h2 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-300 to-green-500 mb-12">
-          Our Premium Service
-        </h2>
+      
 
         <div className="flex justify-center">
-          <div className="relative w-full max-w-3xl group transform transition-all duration-500 hover:scale-105">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-xl p-8 border border-white/20 hover:border-white/50 transition-all">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-green-600 to-green-800 opacity-70 rounded-3xl pointer-events-none"></div>
+          {/* Card with Enhanced Animation */}
+          <div className="relative w-full max-w-4xl group transition-all duration-500 hover:scale-105">
+            <div
+              className="bg-gradient-to-b from-green-700 to-green-900 rounded-3xl shadow-[0_10px_40px_rgba(0,255,128,0.3)] p-8 border border-white/10 hover:border-green-400 transition-transform duration-700 hover:rotate-[1deg] hover:skew-y-1"
+            >
+              {/* Animated Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-green-800 to-teal-900 opacity-20 rounded-3xl pointer-events-none animate-pulse-slow"></div>
 
               {/* Content */}
               <div className="relative z-10 text-center">
-                <h3 className="text-4xl font-semibold text-white mb-6">
+                <h3 className="text-4xl font-semibold text-white mb-6 animate-fade-in">
                   Thuqba Membership Status
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
-                  Ensure your dear ones in Riyadh are registered with KMCC and enjoy exclusive benefits.
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed animate-fade-in">
+                  Ensure your loved ones in Riyadh are registered with KMCC and
+                  enjoy exclusive benefits and services designed just for them.
                 </p>
-                <button
-                  onClick={handleNavigation}
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-700 text-white font-medium rounded-full shadow-lg hover:from-green-600 hover:to-green-800 transition-transform duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
-                  <i className="fas fa-check-circle text-xl"></i>
-                  Check Membership Status
-                </button>
+
+                {/* Centered Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleNavigation}
+                    className="px-8 py-4 bg-gradient-to-r from-green-900 to-black text-white font-medium rounded-full shadow-lg hover:from-green-600 hover:to-green-800 hover:shadow-[0_4px_20px_rgba(72,255,72,0.6)] transition-transform duration-300 transform hover:scale-110 flex items-center justify-center gap-3 animate-bounce-slow"
+                  >
+                    <i className="fas fa-check-circle text-xl"></i>
+                    Check Membership Status
+                  </button>
+                </div>
               </div>
             </div>
 
             {/* Glow Effect */}
-            <div className="absolute inset-0 border-2 border-white/30 rounded-3xl opacity-20 group-hover:opacity-50 transition-opacity duration-300 pointer-events-none"></div>
+            <div className="absolute inset-0 border-4 border-transparent rounded-3xl opacity-30 group-hover:border-green-400 transition-opacity duration-700 animate-glow"></div>
           </div>
         </div>
       </div>

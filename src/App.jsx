@@ -13,10 +13,11 @@ import Signup from './admin/pages/SignUp';
 import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
 import Overview from './user/pages/Overview';
-// import UserDetails from './user/pages/UserDetails';
-// import Himaya from './user/pages/Himaya';
-// import Gallery from './user/pages/Gallery';
+import UserDetails from './user/pages/UserDetails';
+import Himaya from './user/pages/Himaya';
+import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
+import Test from './user/pages/Test';
 
 
 function App() {
@@ -30,9 +31,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
           <Route path='overview' element={<Overview />} />
-          {/* <Route path='details' element={<UserDetails/>}/>
+          <Route path='details' element={<UserDetails/>}/>
           <Route path='himaya' element={<Himaya/>}/>
-          <Route path='gallery' element={<Gallery/>}/> */}
+          <Route path='gallery' element={<Gallery/>}/>
+          <Route path='/test' element={<Test/>}/>
 
           <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />

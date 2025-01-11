@@ -1,13 +1,35 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const UNav = () => {
+const UNav = ({scrollToFooter}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(isScrolled)
   return (
-    <nav className="bg-white bg-opacity-10 shadow-xl sticky top-0 z-50 text-black backdrop-blur-lg rounded-full py-2 px-6">
-      <div className="container mx-auto flex justify-center items-center">
+    <div className='flex justify-center'>
+
+<nav
+  className={`bg-white bg-opacity-10 shadow-xl xl:mt-2 mt-[-53px] sticky z-50 text-black backdrop-blur-lg rounded-full py-2 px-6 w-full md:w-10/12 transition-transform duration-300 ${
+    isScrolled ? "transform -translate-y-full" : "transform translate-y-0"
+  }`}
+>
+      <div className="container mx-auto flex md:justify-center items-center">
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold">
@@ -15,7 +37,7 @@ const UNav = () => {
             <a
               href="#home"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Home
             </a>
           </li>
@@ -33,7 +55,7 @@ const UNav = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M19 9l-7 7-7-7"
-                />
+                  />
               </svg>
             </button>
             <div className="absolute top-full left-0 bg-green-800 bg-opacity-10 shadow-xl rounded-md mt-3 w-56 opacity-0 group-hover:opacity-80 group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
@@ -41,7 +63,7 @@ const UNav = () => {
                 <a
                   href="#overview"
                   className="block px-4 py-3 text-black hover:bg-green-600 rounded-t-md"
-                >
+                  >
                   Overview
                 </a>
               </Link>
@@ -58,7 +80,7 @@ const UNav = () => {
             <a
               href="#scheme-types"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Scheme Types
             </a>
           </li>
@@ -66,12 +88,13 @@ const UNav = () => {
             <a
               href="#objectives"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Objectives
             </a>
           </li>
           <li>
             <a
+            
               href="#downloads"
               className="text-black hover:text-green-700 transition-all duration-300"
             >
@@ -80,9 +103,10 @@ const UNav = () => {
           </li>
           <li>
             <a
-              href="#contact"
+            onClick={scrollToFooter}
+            href="#contact"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Contact
             </a>
           </li>
@@ -93,7 +117,7 @@ const UNav = () => {
           <button
             className="text-green-600 focus:outline-none"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-9 w-9"
@@ -106,7 +130,7 @@ const UNav = () => {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16m-7 6h7"
-              />
+                />
             </svg>
           </button>
         </div>
@@ -118,7 +142,7 @@ const UNav = () => {
           <a
             href="#home"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Home
           </a>
           <a
@@ -130,19 +154,19 @@ const UNav = () => {
           <a
             href="#thuqba"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Thuqba Committee
           </a>
           <a
             href="#scheme-types"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Scheme Types
           </a>
           <a
             href="#objectives"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Objectives
           </a>
           <a
@@ -160,6 +184,7 @@ const UNav = () => {
         </div>
       )}
     </nav>
+            </div>
   );
 };
 
