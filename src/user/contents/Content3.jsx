@@ -11,9 +11,9 @@ const Content3 = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [image1, image2, image3];
 
-  // Function to handle the redirect
+  
   const handleRedirect = () => {
-    navigate('/another-page'); // Replace '/another-page' with the route you want to redirect to
+    navigate('/gallery'); 
   };
 
   // Change the background image every 3 seconds
@@ -54,7 +54,7 @@ const Content3 = () => {
       <p className="text-white text-center text-lg drop-shadow-lg z-10 max-w-3xl mx-4">
         Discover an amazing journey filled with opportunities. Our content will keep you engaged and informed. Click the button below to proceed.
       </p>
-
+      
       <div
   onClick={handleRedirect}
   className="p-6 bg-white/30 backdrop-blur-md rounded-full shadow-lg text-white hover:bg-white/50 transition duration-300">

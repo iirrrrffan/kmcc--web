@@ -66,6 +66,7 @@ const SideBar = () => {
                             </NavLink>
                         </li>
                         <li className="mb-6">
+
                             <NavLink
                                 to="/admin/pending-requests"
                                 className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2"
@@ -76,6 +77,7 @@ const SideBar = () => {
                         </li>
 
                         <li className="mb-6">
+
                             <NavLink to="/admins" className="flex items-center hover:bg-green-700 hover:shadow-md transition-all duration-300 rounded p-2">
                                 <FaUserShield className="mr-3 text-lg" />
                                 <span className="text-lg">Admin List</span>

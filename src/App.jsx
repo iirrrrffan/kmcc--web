@@ -13,17 +13,27 @@ import Signup from './admin/pages/SignUp';
 import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
 import Overview from './user/pages/Overview';
+import UserDetails from './user/pages/UserDetails';
+import Himaya from './user/pages/Himaya';
+import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
 import ImageUpload from './admin/pages/ImageUpload';
+import Committee from './user/components/committee/Committee';
+
 
 function App() {
   return (
     <>
       <div>
         <Routes>
+
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
-          <Route path='overview' element={<Overview />} />
+          <Route path='/overview' element={<Overview />} />
+          <Route path='/details' element={<UserDetails/>}/>
+          <Route path='/himaya' element={<Himaya/>}/>
+          <Route path='/gallery' element={<Gallery/>}/>
+          <Route path='/committee' element={<Committee/>}/>
 
           <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />
@@ -36,6 +46,7 @@ function App() {
           <Route path='/profile' element={<UpdateProfile />} />
           <Route path="/admin/pending-requests" element={<AdminRequest />} />
           <Route path="/image/upload" element={<ImageUpload />} />
+
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />
       </div>

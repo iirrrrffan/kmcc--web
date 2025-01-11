@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const HeadOne = () => {
   return (
     <div className="bg-[#252525] py-4 hidden lg:block">
