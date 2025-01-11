@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS
-import image from "../../assets/WhatsApp Image 2024-12-27 at 7.23.10 PM.jpeg";
 import { Link } from "react-router-dom";
 
 const AboutHimaya = () => {
@@ -27,38 +26,10 @@ const AboutHimaya = () => {
   return (
     <div
       id="about-himaya"
-      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b bg-white overflow-hidden"
+      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b "
     >
-      {/* Background Layer */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-black overflow-hidden">
-        {/* Subtle Glowing Circles */}
-        <div className="absolute top-10 left-10 w-64 h-64 bg-gray-800 opacity-40 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-72 h-72 bg-gray-700 opacity-40 blur-3xl rounded-full animate-pulse"></div>
-
-        {/* Additional Floating Blurred Elements */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gray-600 opacity-25 blur-2xl rounded-full animate-pulse"></div>
-          <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gray-700 opacity-15 blur-3xl rounded-full animate-pulse"></div>
-        </div>
-      </div>
-
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-20">
-        {/* Image Section */}
-        <motion.div
-          className="overflow-hidden rounded-lg shadow-lg flex items-center justify-center aspect-square lg:aspect-auto lg:h-full"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={inView ? { scale: 1, opacity: 1 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          data-aos="zoom-in"
-        >
-          <img
-            src={image}
-            alt="Himaya"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </motion.div>
-
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-1 gap-12 items-center relative z-20">
         {/* Content Section */}
         <motion.div
           className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center lg:text-left flex flex-col justify-center h-full"
@@ -75,21 +46,21 @@ const AboutHimaya = () => {
               "Standing by families, always."
             </span>
           </p>
-          <p className="text-sm text-gray-400">
-            <strong>Himaya @ Thuqbah</strong> is a humanitarian initiative undertaken by Thuqbah KMCC, . The
-program aims to provide member chikhilsa sahayam. Many expatriate families face
-immense hardship after the sudden demise of a family member, struggling to meet basic
-needs such as food, children's education, and medical expenses. "Himaya @ Tukhbah"
-seeks to alleviate the suffering of these families by providing them with necessary
-assistance."
+          <p className="text-sm text-gray-900">
+          <strong>Himaya @ Thuqbah</strong> is a vital humanitarian initiative launched by Thuqbah KMCC, dedicated to supporting expatriate families in their time of need. The program's core mission is to provide crucial financial and emotional assistance to families who are dealing with the untimely loss of a loved one. The sudden demise of a breadwinner often leaves families in a state of financial uncertainty, unable to cover basic living expenses such as food, children’s education, and healthcare. In such dire circumstances, the emotional toll on family members is immense, and the fear of not being able to provide for their loved ones exacerbates the pain.
+
+Through "Himaya @ Thuqbah", the initiative aims to lighten the burden of these families by providing immediate relief and long-term support. This includes offering financial aid to cover essential needs, such as food supplies, medical treatment, and education fees. Additionally, Himaya works to offer emotional and community support, ensuring that grieving families do not feel alone during their difficult times. 
+
+The program operates with the belief that no family should have to struggle alone in the face of such profound loss. By standing together and offering a helping hand, "Himaya @ Thuqbah" seeks to ease the suffering of these families and ensure they are able to rebuild their lives with dignity and hope. This initiative is a testament to the power of solidarity and compassion, as the community comes together to support those who need it the most during their times of hardship.
+
           </p>
           {/* Read More Button */}
           <div className="text-center mt-6">
             <Link to={"himaya"}>
-           <button className="inline-block px-6 py-3 bg-green-800 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition-transform transform duration-300 hover:scale-105">
-              Read More
+              <button className="inline-block px-6 py-3 bg-green-800 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition-transform transform duration-300 hover:scale-105">
+                Read More
               </button>
-              </Link>
+            </Link>
           </div>
         </motion.div>
       </div>

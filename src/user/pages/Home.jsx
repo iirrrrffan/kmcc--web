@@ -56,25 +56,25 @@ const Home = () => {
       <div>
         <BannerTwoArea />
       </div>
-
       <div>
-        <AboutKmcc />
-      </div>
-      <div>
-        <Content1 />
+        <ServiceArea />
       </div>
       <div>
         <AboutHimaya />
       </div>
       <div>
-        <ServiceArea />
+        <AboutKmcc />
       </div>
       <div>
         <KmccScheme />
       </div>
       <div>
-        <Committee />
+        <Content1 />
       </div>
+      
+      {/* <div>
+        <Committee />
+      </div> */}
       <div>
         <Content2 />
       </div>
