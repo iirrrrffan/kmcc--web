@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 
 export const approveAdminRequest = async (pendingAdminId) => {
     try {
