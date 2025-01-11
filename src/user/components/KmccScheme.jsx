@@ -1,37 +1,67 @@
-import React from 'react';
+import React from "react";
+import { FaUserCheck, FaClipboardList } from "react-icons/fa";
 
 const KmccScheme = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-400 via-gray-500 to-indigo-600 p-8 flex flex-col items-center justify-center space-y-10">
-      {/* Header */}
-      <h1 className="text-4xl font-extrabold text-white text-center animate-fade-in-down">
-        KMCC Scheme
-      </h1>
+    <div className="min-h-[50vh] bg-gradient-to-b flex items-center justify-center p-6">
+      {/* Container: Schemes Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+        {/* Card: 1 */}
+        <div className="relative bg-gradient-to-br from-green-900 to-green-700 rounded-xl shadow-lg p-6 h-[400px] transform transition-transform duration-500 hover:scale-105 hover:shadow-[0px_10px_30px_rgba(72,255,72,0.5)] flex flex-col-reverse">
+          {/* Decorative Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-800 opacity-10 rounded-xl"></div>
+          <div className="relative z-10 flex flex-col items-center flex-grow">
+            <h3 className="text-lg font-medium text-green-300 text-center uppercase tracking-wide">
+              KMCC
+            </h3>
+            <h2 className="text-2xl font-bold text-white text-center">
+              Check Your Scheme Status
+            </h2>
+            <p className="text-gray-300 text-center mt-3 text-sm">
+              Verify your KMCC membership status instantly with just a click.
+            </p>
+            <a
+              href="https://www.mykmcc.org/security-scheme-status"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4"
+            >
+              <button className="w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white font-bold py-3 rounded-lg shadow-md hover:shadow-[0px_4px_15px_rgba(72,255,72,0.7)] transition-transform duration-300 transform hover:scale-105">
+                Check
+              </button>
+            </a>
+          </div>
+          <FaUserCheck className="text-green-400 text-[320px] mb-4" />
+        </div>
 
-      {/* First Layer: Saudi KMCC Membership Status Check */}
-      <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8 space-y-6 transform transition-transform duration-500 hover:translate-y-[-10px] animate-slide-in-left">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center">Saudi KMCC Membership Status</h2>
-        <p className="text-gray-600 text-center">
-          Verify your Saudi KMCC membership status instantly with just a click.
-        </p>
-        <button
-          className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-        >
-          Check Membership Status
-        </button>
-      </div>
+      {/* Card: 2 */}
+<div className="relative bg-gradient-to-br from-[rgba(183,111,31,1)] to-orange-700 rounded-xl shadow-lg p-6 h-[400px] transform transition-transform duration-500 hover:scale-105 hover:shadow-[0px_10px_30px_rgba(253,126,20,0.5)] flex flex-col-reverse">
+  {/* Decorative Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[rgba(183,111,31,1)] to-[rgba(223,143,55,1)] opacity-10 rounded-xl"></div>
+  <div className="relative z-10 flex flex-col items-center flex-grow">
+    <h3 className="text-lg font-medium text-orange-300 text-center uppercase tracking-wide">
+      KMCC
+    </h3>
+    <h2 className="text-2xl font-bold text-white text-center">
+      Membership Status
+    </h2>
+    <p className="text-gray-300 text-center mt-3 text-sm">
+      Check the current status of your application.
+    </p>
+    <a
+      href="https://www.mykmcc.in/search"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4"
+    >
+      <button className="w-full bg-gradient-to-r from-[rgba(183,111,31,1)] to-orange-800 hover:from-orange-600 hover:to-orange-900 text-white font-bold py-3 rounded-lg shadow-md hover:shadow-[0px_4px_15px_rgba(253,126,20,0.7)] transition-transform duration-300 transform hover:scale-105">
+        Check
+      </button>
+    </a>
+  </div>
+  <FaClipboardList className="text-orange-400 text-[320px] mb-4" />
+</div>
 
-      {/* Second Layer: Saudi Security Scheme Status Check */}
-      <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8 space-y-6 transform transition-transform duration-500 hover:translate-y-[-10px] animate-slide-in-right">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center">Saudi Security Scheme Status</h2>
-        <p className="text-gray-600 text-center">
-          Check the current status of your Saudi Security Scheme application.
-        </p>
-        <button
-          className="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-        >
-          Check Security Scheme Status
-        </button>
       </div>
     </div>
   );

@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       animation: {
-        'zoom-in': 'zoomIn 5s ease-in-out', // Define the zoom-in animation // Define the zoom-out animation
+        'zoom-in': 'zoomIn 5s ease-in-out', 
+        'fadeInUp': 'fadeInUp 1.5s ease-out', 
+        'zoom-in': 'zoomIn 5s ease-in-out', 
         'fadeInUp': 'fadeInUp 1.5s ease-out', 
       },
       fadeInUp: {
@@ -24,6 +26,16 @@ export default {
         zoomIn: {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.2)' },
+        },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
         },
       },
     },
