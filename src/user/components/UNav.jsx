@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router";
 
 const UNav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,21 +46,22 @@ const UNav = () => {
                 />
               </svg>
             </button>
-            <div className="absolute top-full left-0 bg-green-800 bg-opacity-10 shadow-xl rounded-md mt-3 w-56 opacity-0 group-hover:opacity-80 group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
-              <a
-                href="#overview"
-                className="block px-4 py-3 text-black hover:bg-green-600 rounded-t-md"
+            <div className="absolute top-full left-0 bg-green-800 shadow-xl rounded-md mt-3 w-56 opacity-0 group-hover:opacity-80 group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
+              <Link
+                to="/about/overview" // Updated path based on your router
+                className="block px-4 py-3 text-black bg-white hover:bg-green-600 rounded-t-md"
               >
                 Overview
-              </a>
-              <a
-                href="#thuqba"
-                className="block px-4 py-3 text-black hover:bg-green-600 rounded-b-md"
+              </Link>
+              <Link
+                to="/about/thuqba" // Updated path based on your router
+                className="block px-4 py-3 text-black bg-white hover:bg-green-600 rounded-b-md"
               >
                 Thuqba Committee
-              </a>
+              </Link>
             </div>
           </li>
+
           <li>
             <a
               href="#scheme-types"

@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom';
-import Home from './user/pages/Home'
-import CheckHimaya from './user/pages/CheckHimaya';
+import { router } from './routes/router'
+import { RouterProvider } from 'react-router'
 
 function App() {
 
   return (
     <>
       <div>
-        <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='log' element={<CheckHimaya/>}/>
-     </Routes>
+      <RouterProvider router={router} />
       </div>
 
     </>
