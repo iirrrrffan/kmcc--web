@@ -93,9 +93,11 @@ const Overview = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
+          <a href="https://kmcccare.com/scheme-registration">
           <button className="px-6 py-2 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition-colors">
             Join KMCC Today
           </button>
+          </a>
         </motion.div>
       </div>
     </section>

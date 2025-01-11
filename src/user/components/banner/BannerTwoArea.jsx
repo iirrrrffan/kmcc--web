@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/zoom";
 import { motion } from "framer-motion";
-
+  
 const BannerTwoArea = () => {
   const slides = [
     "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioGs0UO9P6E0/v1/1200x808.jpg",
@@ -57,7 +57,7 @@ const BannerTwoArea = () => {
                 Connecting Malayali Hearts <br /> With Culture and Care
               </motion.h1>
               <motion.a
-                href="cause-single.html"
+                href="/himaya"
                 className="bg-gradient-to-r from-green-700 to-green-900 px-8 py-3 rounded-full text-white font-medium text-base shadow-lg hover:opacity-90 hover:scale-105 transition-all tracking-wide uppercase"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
