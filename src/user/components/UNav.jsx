@@ -25,9 +25,9 @@ const UNav = ({scrollToFooter}) => {
     <div className='flex justify-center'>
 
 <nav
-  className={`bg-white bg-opacity-10 shadow-xl xl:mt-2 mt-[-53px] sticky z-50 text-black backdrop-blur-lg rounded-full py-2 px-6 w-full md:w-10/12 transition-transform duration-300 ${
+  className={`xl:bg-white xl:bg-opacity-10  bg-opacity-0  shadow-xl xl:mt-2 mt-[-53px] sticky z-50 text-black backdrop-blur-lg rounded-full py-2 px-6 w-full md:w-1/2 transition-transform duration-300 ${
     isScrolled ? "transform -translate-y-full" : "transform translate-y-0"
-  }`}
+  } ${isMobileMenuOpen?"backdrop-blur-none":"backdrop-blur-lg"}`}
 >
       <div className="container mx-auto flex md:justify-center items-center">
 
@@ -138,7 +138,7 @@ const UNav = ({scrollToFooter}) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="bg-gradient-to-b from-green-400 to-green-600 bg-opacity-90 text-white md:hidden space-y-3 px-6 py-4 shadow-lg">
+        <div className="bg-gradient-to-b backdrop-blur-lg bg-opacity-90 text-white md:hidden w-full space-y-3 px-6 py-4 shadow-lg ml-[-12px] mt-1">
           <a
             href="#home"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"

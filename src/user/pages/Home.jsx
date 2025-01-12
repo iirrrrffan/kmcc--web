@@ -53,7 +53,7 @@ const Home = () => {
       </div>
 
       {/* Content */}
-      <div className='bg-red-400 '>
+      <div>
         <BannerTwoArea />
       </div>
       <div>

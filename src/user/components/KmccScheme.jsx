@@ -5,7 +5,7 @@ const KmccScheme = () => {
   return (
     <div className="min-h-[50vh] bg-gradient-to-b flex items-center justify-center p-6">
       {/* Container: Schemes Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-14  w-full max-w-6xl">
         {/* Card: 1 */}
         <div className="relative bg-gradient-to-br from-green-900 to-green-700 rounded-xl shadow-lg p-6 h-[400px] transform transition-transform duration-500 hover:scale-105 hover:shadow-[0px_10px_30px_rgba(72,255,72,0.5)] flex flex-col-reverse">
           {/* Decorative Overlay */}
