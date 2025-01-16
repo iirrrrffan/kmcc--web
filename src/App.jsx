@@ -17,7 +17,7 @@ import UserDetails from './user/pages/UserDetails';
 import Himaya from './user/pages/Himaya';
 import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
-import Test from './user/pages/Test';
+import Committee from './user/components/committee/Committee';
 
 
 function App() {
@@ -26,15 +26,13 @@ function App() {
       <div>
         <Routes>
 
-
-
           <Route path='/' element={<Home />} />
           <Route path='/log' element={<CheckHimaya />} />
-          <Route path='overview' element={<Overview />} />
-          <Route path='details' element={<UserDetails/>}/>
-          <Route path='himaya' element={<Himaya/>}/>
-          <Route path='gallery' element={<Gallery/>}/>
-          <Route path='/test' element={<Test/>}/>
+          <Route path='/overview' element={<Overview />} />
+          <Route path='/details' element={<UserDetails/>}/>
+          <Route path='/himaya' element={<Himaya/>}/>
+          <Route path='/gallery' element={<Gallery/>}/>
+          <Route path='/committee' element={<Committee/>}/>
 
           <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />
