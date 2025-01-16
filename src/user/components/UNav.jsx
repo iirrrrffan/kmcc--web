@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const UNav = ({scrollToFooter}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(isScrolled)
   return (
-    <nav className="bg-white bg-opacity-10 shadow-xl sticky top-0 z-50 text-black backdrop-blur-lg rounded-full py-2 px-6">
-      <div className="container mx-auto flex justify-center items-center">
+    <div className='flex justify-center'>
+
+<nav
+  className={`xl:bg-white xl:bg-opacity-10  bg-opacity-0  shadow-xl xl:mt-2 mt-[-53px] sticky z-50 text-black backdrop-blur-lg rounded-full py-2 px-6 w-full md:w-1/2 transition-transform duration-300 ${
+    isScrolled ? "transform -translate-y-full" : "transform translate-y-0"
+  } ${isMobileMenuOpen?"backdrop-blur-none":"backdrop-blur-lg"}`}
+>
+      <div className="container mx-auto flex md:justify-center items-center">
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold">
@@ -14,7 +37,7 @@ const UNav = ({scrollToFooter}) => {
             <a
               href="#home"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Home
             </a>
           </li>
@@ -32,7 +55,7 @@ const UNav = ({scrollToFooter}) => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M19 9l-7 7-7-7"
-                />
+                  />
               </svg>
             </button>
             <div className="absolute top-full left-0 bg-green-800 bg-opacity-10 shadow-xl rounded-md mt-3 w-56 opacity-0 group-hover:opacity-80 group-hover:translate-y-2 transform transition-all duration-300 ease-in-out">
@@ -40,7 +63,7 @@ const UNav = ({scrollToFooter}) => {
                 <a
                   href="#overview"
                   className="block px-4 py-3 text-black hover:bg-green-600 rounded-t-md"
-                >
+                  >
                   Overview
                 </a>
               </Link>
@@ -52,11 +75,12 @@ const UNav = ({scrollToFooter}) => {
               </a>
             </div>
           </li>
+
           <li>
             <a
               href="#scheme-types"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Scheme Types
             </a>
           </li>
@@ -64,7 +88,7 @@ const UNav = ({scrollToFooter}) => {
             <a
               href="#objectives"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Objectives
             </a>
           </li>
@@ -80,9 +104,9 @@ const UNav = ({scrollToFooter}) => {
           <li>
             <a
             onClick={scrollToFooter}
-              href="#contact"
+            href="#contact"
               className="text-black hover:text-green-700 transition-all duration-300"
-            >
+              >
               Contact
             </a>
           </li>
@@ -93,7 +117,7 @@ const UNav = ({scrollToFooter}) => {
           <button
             className="text-green-600 focus:outline-none"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-9 w-9"
@@ -106,7 +130,7 @@ const UNav = ({scrollToFooter}) => {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16m-7 6h7"
-              />
+                />
             </svg>
           </button>
         </div>
@@ -114,11 +138,11 @@ const UNav = ({scrollToFooter}) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="bg-gradient-to-b from-green-400 to-green-600 bg-opacity-90 text-white md:hidden space-y-3 px-6 py-4 shadow-lg">
+        <div className="bg-gradient-to-b backdrop-blur-lg bg-opacity-90 text-white md:hidden w-full space-y-3 px-6 py-4 shadow-lg ml-[-12px] mt-1">
           <a
             href="#home"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Home
           </a>
           <a
@@ -130,19 +154,19 @@ const UNav = ({scrollToFooter}) => {
           <a
             href="#thuqba"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Thuqba Committee
           </a>
           <a
             href="#scheme-types"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Scheme Types
           </a>
           <a
             href="#objectives"
             className="block hover:bg-green-500 px-4 py-2 rounded-lg transition-all duration-300"
-          >
+            >
             Objectives
           </a>
           <a
@@ -160,6 +184,7 @@ const UNav = ({scrollToFooter}) => {
         </div>
       )}
     </nav>
+            </div>
   );
 };
 
