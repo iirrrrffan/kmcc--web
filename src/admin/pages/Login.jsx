@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-green-50" style={{ backgroundImage: 'url(https://i.pinimg.com/originals/d0/42/7b/d0427bf0fa38cf5d3151c68825bea9d5.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="flex items-center justify-center min-h-screen bg-green-50">
       <div className="w-full max-w-md p-10 bg-white rounded-2xl shadow-xl shadow-green-200">
         <h2 className="text-3xl font-extrabold text-center text-green-700 mb-8">Login</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
