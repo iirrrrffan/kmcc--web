@@ -13,7 +13,7 @@ import Signup from './admin/pages/SignUp';
 import AdminList from './admin/pages/AdminList';
 import UpdateProfile from './admin/pages/UpdateProfile';
 import Overview from './user/pages/Overview';
-import UserDetails from './user/pages/UserDetails';
+import UserDetails from './user/pages/UserDetails'; 
 import Himaya from './user/pages/Himaya';
 import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
