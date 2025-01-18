@@ -5,7 +5,7 @@ import { UserDetailsModal } from '../components/Modal';
 import { FiEdit, FiTrash, FiEye } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
+    
 const UsersList = () => {
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);

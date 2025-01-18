@@ -67,12 +67,14 @@ const UNav = ({scrollToFooter}) => {
                   Overview
                 </a>
               </Link>
+              <Link to={"/committee"}>
               <a
                 href="#thuqba"
                 className="block px-4 py-3 text-black hover:bg-green-600 rounded-b-md"
               >
                 Thuqba Committee
               </a>
+              </Link>
             </div>
           </li>
 

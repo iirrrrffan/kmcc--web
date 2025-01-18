@@ -57,49 +57,80 @@ const Dashboard = () => {
 
     return (
         <>
-            <SideBar />
-            <div className="min-h-screen bg-green-50 flex items-start">
-                <div className="bg-white p-6 rounded-lg shadow-lg w-full mx-4 my-6 lg:my-8">
-                    <div className="flex items-center justify-between mb-8">
-                        <div className="text-center w-full">
-                            <h1 className="text-3xl font-bold text-green-600 font-serif mb-4">
-                                KMCC ADMIN DASHBOARD
-                            </h1>
-                            <p className="text-gray-600">
-                                Welcome to the dashboard. Manage users and settings here.
-                            </p>
+        <SideBar />
+        <div className="min-h-screen bg-gray-50 flex flex-col">
+            {/* Header */}
+            <header className="bg-white shadow-md p-6 flex justify-between items-center">
+                <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
+                    KMCC ADMIN DASHBOARD
+                </h1>
+                <div className="flex items-center space-x-4">
+                    <button
+                        onClick={() => navigate('/settings')}
+                        className="text-gray-600 hover:text-gray-800 transition"
+                    >
+                        <i className="fas fa-cog text-xl"></i>
+                    </button>
+                    <img
+                        src={adminProfile?.photo || 'https://via.placeholder.com/40'}
+                        alt="Admin Profile"
+                        className="w-12 h-12 rounded-full border-2 border-gray-300 cursor-pointer"
+                        onClick={() => navigate('/profile')}
+                    />
+                </div>
+            </header>
+    
+            {/* Main Content */}
+            <main className="flex-1 p-6">
+                {/* Stats Section */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {/* Card 1 */}
+                    <div className="bg-white rounded-lg shadow-lg p-5 flex items-center justify-between hover:shadow-xl transition">
+                        <div>
+                            <h3 className="text-sm font-medium text-gray-500 uppercase">
+                                Total Users
+                            </h3>
+                            <p className="text-3xl font-bold text-gray-800">{totalUsers}</p>
                         </div>
-                        <img
-                            src={adminProfile?.photo || 'https://via.placeholder.com/50'}
-                            alt="Admin Profile"
-                            className="w-20 h-20 rounded-full cursor-pointer border-2 border-gray-300 ml-auto"
-                            onClick={() => navigate('/profile')}
-                        />
+                        <i className="fas fa-users text-4xl text-blue-500"></i>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-blue-100 p-6 rounded-lg shadow-md flex flex-col items-center">
-                            <h2 className="text-xl font-semibold text-blue-600">Total Users</h2>
-                            <p className="text-3xl font-bold text-blue-800">{totalUsers}</p>
+                    {/* Card 2 */}
+                    <div className="bg-white rounded-lg shadow-lg p-5 flex items-center justify-between hover:shadow-xl transition">
+                        <div>
+                            <h3 className="text-sm font-medium text-gray-500 uppercase">
+                                Expired Users
+                            </h3>
+                            <p className="text-3xl font-bold text-gray-800">{expiredUsers}</p>
                         </div>
-
-                        <div className="bg-red-100 p-6 rounded-lg shadow-md flex flex-col items-center">
-                            <h2 className="text-xl font-semibold text-red-600">Expired Users</h2>
-                            <p className="text-3xl font-bold text-red-800">{expiredUsers}</p>
-                        </div>
-
-                        <div className="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
-                            <h2 className="text-xl font-semibold text-green-600">Active Users</h2>
-                            <p className="text-3xl font-bold text-green-800">{remainingUsers}</p>
-                        </div>
+                        <i className="fas fa-user-slash text-4xl text-red-500"></i>
                     </div>
-
-                    {/* Placeholder for Graph */}
-                    <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span className="text-gray-600">Chart Goes Here</span>
+                    {/* Card 3 */}
+                    <div className="bg-white rounded-lg shadow-lg p-5 flex items-center justify-between hover:shadow-xl transition">
+                        <div>
+                            <h3 className="text-sm font-medium text-gray-500 uppercase">
+                                Active Users
+                            </h3>
+                            <p className="text-3xl font-bold text-gray-800">{remainingUsers}</p>
+                        </div>
+                        <i className="fas fa-user-check text-4xl text-green-500"></i>
                     </div>
                 </div>
-            </div>
-        </>
+    
+                {/* Graph Section */}
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                        User Statistics
+                    </h3>
+                    <div className="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <span className="text-gray-400">Graph Placeholder</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </>
+    
+    
+    
     );
 };
 
