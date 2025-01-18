@@ -17,6 +17,7 @@ import UserDetails from './user/pages/UserDetails';
 import Himaya from './user/pages/Himaya';
 import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
+import ImageUpload from './admin/pages/ImageUpload';
 import Committee from './user/components/committee/Committee';
 
 
@@ -43,8 +44,8 @@ function App() {
           <Route path='/edit/:id' element={<EditUsers />} />
           <Route path='/admins' element={<AdminList />} />
           <Route path='/profile' element={<UpdateProfile />} />
-
           <Route path="/admin/pending-requests" element={<AdminRequest />} />
+          <Route path="/image/upload" element={<ImageUpload />} />
 
         </Routes>
         <ToastContainer position="top-center" autoClose={500} />

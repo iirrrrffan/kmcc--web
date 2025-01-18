@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../components/Sidebar';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -58,12 +58,14 @@ const Dashboard = () => {
     return (
         <>
         <SideBar />
+
         <div className="min-h-screen bg-green-800 flex flex-col">
             {/* Header */}
             <header className="bg-white shadow-md p-6 flex justify-center  items-center">
             <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
         HIMAYA ADMIN DASHBOARD
     </h1>
+
                 <div className="flex items-center space-x-4">
                     <button
                         onClick={() => navigate('/settings')}

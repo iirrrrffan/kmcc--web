@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import SideBar from '../components/Sidebar';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 
 const UpdateProfile = () => {
     const Nvgt = useNavigate();

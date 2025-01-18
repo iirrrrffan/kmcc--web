@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SideBar from '../components/Sidebar';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 

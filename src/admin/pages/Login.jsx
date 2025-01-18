@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import { toast } from 'react-toastify';
 
 const Login = () => {
