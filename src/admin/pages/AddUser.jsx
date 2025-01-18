@@ -93,7 +93,7 @@ const AddUser = () => {
     return (
         <>
             <SideBar />
-            <div className="min-h-screen bg-green-200 flex justify-center items-center p-6">
+            <div className="min-h-screen bg-green-700 flex justify-center items-center p-6">
                 <div className="bg-white p-10 rounded-lg shadow-md w-full max-w-4xl max-h-[90vh] flex flex-col">
                     <h2 className="text-center text-3xl font-semibold text-green-600 mb-6 font-serif">Add User</h2>
                     <form className="overflow-y-auto flex-grow space-y-6">

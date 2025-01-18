@@ -36,7 +36,7 @@ const PendingAdmins = () => {
                 <div className="max-w-screen-xl mx-auto">
                     <div className="overflow-x-auto shadow-lg rounded-lg border border-gray-200 bg-white">
                         <table className="min-w-full bg-white text-sm text-gray-600 table-auto sm:rounded-lg">
-                            <thead className="bg-green-500 text-white">
+                            <thead className="bg-green-800 text-white">
                                 <tr>
                                     <th className="px-6 py-3 text-center">Name</th>
                                     <th className="px-6 py-3 text-center">Email</th>
@@ -51,7 +51,7 @@ const PendingAdmins = () => {
                                             <td className="px-6 py-4">{admin.email}</td>
                                             <td className="px-6 py-4 text-center">
                                                 <button
-                                                    className="bg-green-500 text-white px-4 py-2 rounded-md mr-4 mb-4 sm:mb-0 hover:bg-green-600 focus:outline-none transition-colors text-xs sm:text-sm md:text-base"
+                                                    className="bg-green-600 text-white px-4 py-2 rounded-md mr-4 mb-4 sm:mb-0 hover:bg-green-800 focus:outline-none transition-colors text-xs sm:text-sm md:text-base"
                                                     onClick={() => handleApprove(admin._id)}
                                                 >
                                                     Accept

@@ -58,12 +58,12 @@ const Dashboard = () => {
     return (
         <>
         <SideBar />
-        <div className="min-h-screen bg-gray-50 flex flex-col">
+        <div className="min-h-screen bg-green-800 flex flex-col">
             {/* Header */}
-            <header className="bg-white shadow-md p-6 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
-                    KMCC ADMIN DASHBOARD
-                </h1>
+            <header className="bg-white shadow-md p-6 flex justify-center  items-center">
+            <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
+        HIMAYA ADMIN DASHBOARD
+    </h1>
                 <div className="flex items-center space-x-4">
                     <button
                         onClick={() => navigate('/settings')}
