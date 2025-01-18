@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import bg from "../../assets/green bg.jfif";
 
 const CheckHimaya = () => {
-  const [identifier, setIdentifier] = useState(""); // Single input field for Iqama or Adhar
+  const [identifier, setIdentifier] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -11,7 +12,6 @@ const CheckHimaya = () => {
     e.preventDefault();
     setError("");
 
-    // Validation: Ensure the input field is not empty
     if (!identifier) {
       setError("Please enter your Iqama or Adhar Number.");
       return;
@@ -19,13 +19,12 @@ const CheckHimaya = () => {
 
     try {
       const response = await axios.post("http://localhost:4000/user/login", {
-        iqamaNumber: identifier, // Send the identifier as iqamaNumber
-        AdharNumber: identifier, // Also send the identifier as AdharNumber
+        iqamaNumber: identifier,
+        AdharNumber: identifier,
       });
 
       if (response.data) {
         const user = response.data.user;
-        // Navigate to UserDetails page with user data
         navigate("/details", { state: { user } });
       }
     } catch (err) {
@@ -34,10 +33,17 @@ const CheckHimaya = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden">
+    <div
+      className="relative flex items-center justify-center min-h-screen"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="flex w-full max-w-5xl bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
         <div className="flex-1 hidden md:block bg-gray-200"></div>
-        <div className="flex-1 p-8 flex flex-col justify-center bg-white">
+        <div className="flex-1 p-8 flex flex-col justify-center">
           <h1 className="text-3xl font-bold text-center text-green-600 mb-6">
             Check Himaya Status
           </h1>
