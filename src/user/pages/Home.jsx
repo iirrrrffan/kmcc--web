@@ -41,7 +41,7 @@ const Home = () => {
   }, [lastScrollPosition]);
 
   return (
-    <div className="relative">
+    <div className="relative" >
       {/* Top Bar and Navbar */}
       <HeadOne />
       <div
@@ -87,11 +87,11 @@ const Home = () => {
       </div>
 
       {/* Logo in the top right corner */}
-      <div className="absolute top-4 right-4 z-50">
+      <div className="absolute xl:top-4 xl:right-4 top-1 right-4 z-50">
         <img
           src={logo}
           alt="Logo"
-          className="w-24 h-24 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:rotate-6"
+          className="xl:w-24 xl:h-24 w-12 h-12 rounded-full shadow-lg transition-transform transform hover:scale-110 hover:rotate-6"
         />
       </div>
     </div>
