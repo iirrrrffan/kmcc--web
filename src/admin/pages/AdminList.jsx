@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../components/Sidebar';
 import { FaTrash } from 'react-icons/fa';
-import { adminInstance } from '../../axiosInstance/admin';
 import { toast } from 'react-toastify';
+import { adminInstance } from '../../axiosInstance/Axios';
 
 const AdminList = () => {
     const [admins, setAdmins] = useState([]);

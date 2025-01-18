@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SideBar from '../components/Sidebar';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import { approveAdminRequest, rejectAdminRequest } from '../request-api/PendingRequest';
 
 const PendingAdmins = () => {

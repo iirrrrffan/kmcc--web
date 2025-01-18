@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import SideBar from '../components/Sidebar';
 
 const ExpiredUsers = () => {

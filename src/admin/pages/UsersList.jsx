@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import SideBar from '../components/Sidebar';
 import { UserDetailsModal } from '../components/Modal';
 import { FiEdit, FiTrash, FiEye } from 'react-icons/fi';

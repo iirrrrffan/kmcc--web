@@ -26,10 +26,10 @@ const AboutHimaya = () => {
   return (
     <div
       id="about-himaya"
-      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b "
+      className="relative py-16 px-6 sm:px-12 bg-gradient-to-b flex justify-center "
     >
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-1 gap-12 items-center relative z-20">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-1 gap-12 items-center relative z-20 w-1/2">
         {/* Content Section */}
         <motion.div
           className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center lg:text-left flex flex-col justify-center h-full"
@@ -63,6 +63,9 @@ The program operates with the belief that no family should have to struggle alon
             </Link>
           </div>
         </motion.div>
+      </div>
+      <div className="w-1/2 bg-red-600">
+
       </div>
     </div>
   );
