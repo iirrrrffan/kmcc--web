@@ -12,9 +12,9 @@ const ServiceArea = () => {
     <section className="service-area h-[60vh] bg-gradient-to-t " style={{backgroundImage:`url(${bgImage})`}}>
       {/* <div className="container mx-auto px-6 sm:px-8 lg:px-16"> */}
       
-        <div className="flex  h-full ml-48  justify-start items-center">
+        <div className="flex  h-full md:ml-48  justify-start items-center">
           {/* Card with Enhanced Animation */}
-          <div className="relative  w-1/2 group transition-all duration-500 ">
+          <div className="relative w-full  md:w-1/2 group transition-all duration-500 ">
             <div
               className="bg-gradient-to-b mt-3 from-green-700 to-green-900 rounded-3xl shadow-[0_10px_40px_rgba(0,255,128,0.3)] p-12 border border-white/10 hover:border-green-400 transition-transform duration-700 hover:rotate-[1deg] hover:skew-y-1"
             >

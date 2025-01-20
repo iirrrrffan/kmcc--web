@@ -33,20 +33,17 @@ function Contact() {
   }, [lastScrollPosition]);
   return (
     <div className="relative">
-      <motion.div
+      <div
         className={`top-0 w-full z-50 fixed transition-transform duration-300 pt-[54px] ${
-          isScrollingUp ? "-translate-y-12" : "-translate-y-full"
+          isScrollingUp ? "-translate-y-11" : "-translate-y-full"
         }`}
-        initial={{ y: "-100%" }}
-        animate={{ y: isScrollingUp ? "0%" : "-100%" }}
-        transition={{ duration: 0.5 }}
       >
         <UNav
           scrollToFooter={() =>
             footerRef.current.scrollIntoView({ behavior: "smooth" })
           }
         />
-      </motion.div>
+      </div>
       <motion.div
         className="bg-primary flex justify-center items-center w-full h-60 bg-cover bg-center bg-no-repeat"
         style={{

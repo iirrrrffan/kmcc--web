@@ -28,21 +28,21 @@ const AboutHimaya = () => {
   return (
     <div
       id="about-himaya"
-      className="relative py-16 bg-gradient-to-b flex justify-center pr-16 mb-3"
+      className="relative py-16 bg-gradient-to-b md:flex justify-center md:pr-16 mb-3"
     >
-      <div className="w-1/2">
+      <div className="md:w-1/2  w-full">
         <div
           className="lg:w-1/2 w-full wow fadeInLeft relative"
           data-wow-delay="200ms"
           data-wow-duration="1500ms"
         >
-          <div className="relative">
+          <div className="relative ">
             {/* Dots Decoration */}
-            <div className="absolute right-16 top-0 animate-bobble">
+            <div className="absolute right-16 top-0 animate-bobble md:flex hidden">
               <img src={dotImage} alt="dots" className="h-full" />
             </div>
             {/* Small Image */}
-            <div className="absolute -right-44 -bottom-10 z-20 border border-green-500 border-t-2 border-b-0 border-r-0 border-l-2">
+            <div className="absolute -right-44 -bottom-10 z-20 border hidden md:flex border-green-500 border-t-2 border-b-0 border-r-0 border-l-2">
               <img
                 src="https://sun1-90.userapi.com/impg/i3W08NyVVPCNa-cdJTBljr-n1vwc2nA_X_gVUQ/oeJR22RKLa0.jpg?size=1024x576&quality=95&sign=458628c1fe0adbdfb5b4f5b036931fbb&c_uniq_tag=Kulci29K5wPRyLnP7IY5wxXReXaUqFboolNrQZB0grQ&type=album"
                 alt="Small image"
@@ -50,7 +50,7 @@ const AboutHimaya = () => {
               />
             </div>
             {/* Main Image */}
-            <div className="relative top-2 left-36 aspect-[16/9] lg:aspect-[2/3] overflow-hidden  shadow-xl z-10 ">
+            <div className="relative md:top-2 md:left-36  aspect-[16/9] lg:aspect-[2/3]  md:flex overflow-hidden  shadow-xl z-10 ">
               <img
                 src="https://www.transindus.co.uk/media/7924/tailormade-and-group-tour-india-highlight-wayanad-1.jpg"
                 alt="Main image"
@@ -61,7 +61,7 @@ const AboutHimaya = () => {
         </div>
       </div>
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-1 gap-12 items-center relative z-20 w-1/2">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-1 gap-12 items-center relative z-20 w-full md:w-1/2 ">
         {/* Content Section */}
         <motion.div
           className="bg-white/20 backdrop-blur-lg p-8 text-center lg:text-left flex flex-col justify-center h-full"
@@ -85,7 +85,7 @@ const AboutHimaya = () => {
           </p>
           <div className="about-two__content">
             <div className="item flex items-center gap-5 mb-6">
-              <div className="icon w-20 h-20 flex items-center justify-center rounded-none  bg-light">
+              <div className="icon w-20 h-20 flex items-center justify-center md:rounded-none sm:rounded-full md:p-0 sm:p-5 p-2  bg-light">
               <SiTransmission color="white" size={25}/>
               </div>
               <div className="content">
@@ -97,7 +97,7 @@ const AboutHimaya = () => {
             </div>
 
             <div className="item flex items-center gap-5">
-              <div className="icon w-20 h-20 flex items-center justify-center rounded-none  bg-light">
+              <div className="icon w-20 h-20 flex items-center justify-center md:rounded-none sm:rounded-full md:p-0 sm:p-5 p-2  bg-light">
                 <FaHistory color="white" size={30} />
               </div>
               <div className="content">
