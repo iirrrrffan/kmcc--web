@@ -35,7 +35,7 @@ function Contact() {
     <div className="relative">
       <div
         className={`top-0 w-full z-50 fixed transition-transform duration-300 pt-[54px] ${
-          isScrollingUp ? "-translate-y-11" : "-translate-y-full"
+          isScrollingUp ? "md:-translate-y-11 " : "-translate-y-full"
         }`}
       >
         <UNav
@@ -56,14 +56,14 @@ function Contact() {
       >
         {/* <p className="text-7xl  text-center font-bold">contact</p> */}
       </motion.div>
-      <div className=" w-full  flex pl-20 pr-20  ">
+      <div className=" w-full  md:flex md:pl-20 md:pr-20 pr-5 pl-5 ">
         {/* leftImagesetion */}
-        <motion.div className="w-2/5 flex justify-center items-center pl-12"
+        <motion.div className="md:w-2/5 w-full flex justify-center items-center  md:pl-12"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         >
-          <div className=" p-2 h-3/4 rounded-lg overflow-hidden">
+          <div className=" p-2 md:h-3/4 w-full md:flex hidden rounded-lg overflow-hidden">
             <img
               className="h-full w-full object-cover rounded-lg"
               src="https://avatars.mds.yandex.net/i?id=548d95277512ad09f3acb35fee463947_l-5139440-images-thumbs&ref=rim&n=13&w=1698&h=1131"
@@ -73,28 +73,28 @@ function Contact() {
         </motion.div>
 
         {/* rightsectiuon */}
-        <motion.div className="w-3/5 flex  p-10 "
+        <motion.div className="md:w-3/5 w-full flex  md:p-10 "
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}>
-          <div className=" w-full p-10">
-            <motion.p className="font-semibold text-7xl text-pretty italic text-center text-primary" initial={{ scale: 0.8, opacity: 0 }}
+          <div className=" w-full md:p-10 p-0">
+            <motion.p className="font-semibold md:text-7xl text-3xl text-pretty italic text-center text-primary" initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}>
               Contact Us
             </motion.p>
             <div>
-              <p className="text-lg mt-1">
+              <p className="md:text-lg mt-1 text-sm">
                 If you like to know more about our services, feel free to
                 contact us
               </p>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="md:text-sm text-gray-600 mt-1 text-xs">
                 We believe in serving others with best in class services and we
                 welcome all your questions and enquiries regarding our services.
               </p>
             </div>
             <div>
-              <motion.form className="space-y-6 mt-1" initial={{ opacity: 0, y: 20 }}
+              <motion.form className="space-y-6 mt-1 mb-5 md:mb-1" initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}>
                 {/* First Name and Last Name */}
@@ -203,7 +203,7 @@ function Contact() {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-primary rounded-lg shadow-md hover:from-green-600 hover:to-primary focus:outline-none focus:ring-4 focus:ring-green-300"
+                    className="px-6 py-3 text-lg  font-semibold text-white bg-gradient-to-r from-green-500 to-primary rounded-lg shadow-md hover:from-green-600 hover:to-primary focus:outline-none focus:ring-4 focus:ring-green-300"
                   >
                     Submit
                   </button>
