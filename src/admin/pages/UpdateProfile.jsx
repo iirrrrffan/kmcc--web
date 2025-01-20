@@ -77,7 +77,7 @@ const UpdateProfile = () => {
     return (
         <>
             <SideBar />
-            <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-green-100 to-green-600 py-10 overflow-x-hidden">
+            <div className="flex justify-center items-center min-h-screen bg-gradient-to-b bg-green-800 py-10 overflow-x-hidden">
                 <form className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl" onSubmit={handleSubmit}>
                     <h2 className="text-3xl font-semibold text-center text-green-800 mb-6 font-serif">Update Your Profile</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

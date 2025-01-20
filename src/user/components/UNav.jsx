@@ -35,7 +35,7 @@ const UNav = ({scrollToFooter}) => {
         <ul className="hidden md:flex space-x-8 text-lg font-semibold">
           <li>
             <a
-              href="#home"
+              href="/"
               className="text-black hover:text-green-700 transition-all duration-300"
               >
               Home
@@ -106,7 +106,7 @@ const UNav = ({scrollToFooter}) => {
           <li>
             <a
             onClick={scrollToFooter}
-            href="#contact"
+            href="/contact"
               className="text-black hover:text-green-700 transition-all duration-300"
               >
               Contact

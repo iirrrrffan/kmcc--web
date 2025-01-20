@@ -19,6 +19,7 @@ import Gallery from './user/pages/Gallery';
 import AdminRequest from './admin/pages/AdminRequest';
 import ImageUpload from './admin/pages/ImageUpload';
 import Committee from './user/components/committee/Committee';
+import Contact from './user/pages/Contact';
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
           <Route path='/himaya' element={<Himaya/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
           <Route path='/committee' element={<Committee/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+
 
           <Route path='/adminregister' element={<Signup />} />
           <Route path='/adminlogin' element={<Login />} />

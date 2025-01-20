@@ -42,7 +42,7 @@ const AdminList = () => {
                 <div className="overflow-x-auto bg-white shadow-lg rounded-xl">
                     <table className="w-full text-gray-700">
                         <thead>
-                            <tr className="bg-green-600 text-white text-center">
+                            <tr className="bg-green-700 text-white text-center">
                                 <th className="p-4 font-semibold">#</th>
                                 <th className="p-4 font-semibold">Name</th>
                                 <th className="p-4 font-semibold">Email</th>
