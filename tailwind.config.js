@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwind-scrollbar');
 export default {
   content: [
     "./index.html",
@@ -39,16 +40,20 @@ export default {
     },
   },
   plugins: [
+    plugin({ nocompatible: true }),
     function ({ addUtilities }) {
-      addUtilities({
-        '.scrollbar-hide': {
-          '&::-webkit-scrollbar': {
-            display: 'none',
+      addUtilities(
+        {
+          ".scrollbar-hide": {
+            "&::-webkit-scrollbar": {
+              display: "none",
+            },
+            "-ms-overflow-style": "none", // IE 10+
+            "scrollbar-width": "none", // Firefox
           },
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
         },
-      }, ['responsive', 'hover']);
+        ["responsive", "hover"]
+      );
     },
   ],
 };

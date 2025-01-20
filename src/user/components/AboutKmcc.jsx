@@ -31,11 +31,12 @@ const AboutKmcc = () => {
     <>
       {/* Section Start */}
       <section
-      style={{ borderRadius: "0 0 50px 50px" }}
+      style={{ borderRadius: "0 0 50px 50px", backgroundImage:"url(https://i.ytimg.com/vi/bNRi-dr48io/maxresdefault.jpg)",backgroundRepeat:"no-repeat",backgroundSize:'cover'}}
         id="about-kmcc"
         className="relative py-24 bg-gradient-to-b bg-green-800 overflow-hidden"
+
       >
-        <div className="global-container relative z-10 px-6 md:px-12 lg:px-20 "
+        <div className="global-container relative z-10 px-6 md:px-12 lg:px-20"
         >
           
           {/* Title */}
@@ -48,7 +49,7 @@ const AboutKmcc = () => {
             <h2 className="text-5xl md:text-6xl font-serif font-extrabold text-white mb-6 tracking-wider drop-shadow-lg">
             KMCC the largest expatriate organisationin the world
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light italic">
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light ">
             The Kerala Muslim Cultural Centre (KMCC) is an expatriate charity and volunteer organisation for expatriates from Kerala.
              Formed in 1981 as an official organisation of the All India Muslim League (AIML) under Umar Bafakhy Thangal, KMCC has promoted the welfare of expatriate Indians through relief activities, C.H. centers and social servicesKMCC has been receiving thunderous applause for its sincere efforts for the social, cultural, economical and educative upliftment of malayalees all over the world. Riyadh KMCC has been a strong and persistent activist in promoting the welfare of expatriate Indians and addressing their day-to-day issues. KMCC has a major footprint in Middle Eastern nations.
             </p>
@@ -77,7 +78,7 @@ const AboutKmcc = () => {
             {/* Button */}
             <Link to={"/overview"}>
               <motion.button
-                className="relative px-12 py-4 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-110 duration-300 ease-in-out uppercase tracking-wider"
+                className="relative px-12 py-4 mt-3 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-110 duration-300 ease-in-out uppercase tracking-wider"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -16,10 +16,10 @@ const ServiceArea = () => {
           {/* Card with Enhanced Animation */}
           <div className="relative  w-1/2 group transition-all duration-500 ">
             <div
-              className="bg-gradient-to-b  from-green-700 to-green-900 rounded-3xl shadow-[0_10px_40px_rgba(0,255,128,0.3)] p-12 border border-white/10 hover:border-green-400 transition-transform duration-700 hover:rotate-[1deg] hover:skew-y-1"
+              className="bg-gradient-to-b mt-3 from-green-700 to-green-900 rounded-3xl shadow-[0_10px_40px_rgba(0,255,128,0.3)] p-12 border border-white/10 hover:border-green-400 transition-transform duration-700 hover:rotate-[1deg] hover:skew-y-1"
             >
               {/* Animated Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-green-800 to-teal-900 opacity-20 rounded-3xl pointer-events-none animate-pulse-slow"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-green-800 to-teal-900 opacity-20 rounded-3xl pointer-events-none animate-pulse-slow"></div> */}
 
               {/* Content */}
               <div className="relative z-10 text-center">

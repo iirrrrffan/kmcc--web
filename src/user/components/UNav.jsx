@@ -106,7 +106,7 @@ const UNav = ({scrollToFooter}) => {
           <li>
             <a
             onClick={scrollToFooter}
-            href="#contact"
+            href="/contact"
               className="text-black hover:text-green-700 transition-all duration-300"
               >
               Contact
