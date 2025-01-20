@@ -11,7 +11,7 @@ const Overview = () => {
       <div className="global-container">
         {/* Header Section */}
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12"    
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
