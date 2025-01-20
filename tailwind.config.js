@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwind-scrollbar');
 export default {
   content: [
     "./index.html",
@@ -6,21 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: 'rgb(21, 128, 61)', // Primary color
+        secondary: 'rgb(15, 76, 36)', // Darker shade for secondary
+        light: 'rgb(34, 197, 94)', // Lighter main color
+      },
       animation: {
         'zoom-in': 'zoomIn 5s ease-in-out', 
         'fadeInUp': 'fadeInUp 1.5s ease-out', 
-        'zoom-in': 'zoomIn 5s ease-in-out', 
-        'fadeInUp': 'fadeInUp 1.5s ease-out', 
-      },
-      fadeInUp: {
-        '0%': {
-          opacity: '0',
-          transform: 'translateY(20px)',
-        },
-        '100%': {
-          opacity: '1',
-          transform: 'translateY(0)',
-        },
+        bobble: 'bobble 4s ease-in-out infinite alternate',
       },
       keyframes: {
         zoomIn: {
@@ -37,20 +32,28 @@ export default {
             transform: 'translateY(0)',
           },
         },
+        bobble: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-10px)' },
+        },
       },
     },
   },
   plugins: [
+    plugin({ nocompatible: true }),
     function ({ addUtilities }) {
-      addUtilities({
-        '.scrollbar-hide': {
-          '&::-webkit-scrollbar': {
-            display: 'none',
+      addUtilities(
+        {
+          ".scrollbar-hide": {
+            "&::-webkit-scrollbar": {
+              display: "none",
+            },
+            "-ms-overflow-style": "none", // IE 10+
+            "scrollbar-width": "none", // Firefox
           },
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
         },
-      }, ['responsive', 'hover']);
+        ["responsive", "hover"]
+      );
     },
   ],
-}
+};
