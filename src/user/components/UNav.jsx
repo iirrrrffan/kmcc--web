@@ -35,7 +35,7 @@ const UNav = ({scrollToFooter}) => {
         <ul className="hidden md:flex space-x-8 text-lg font-semibold">
           <li>
             <a
-              href="#home"
+              href="/"
               className="text-black hover:text-green-700 transition-all duration-300"
               >
               Home
@@ -67,12 +67,14 @@ const UNav = ({scrollToFooter}) => {
                   Overview
                 </a>
               </Link>
+              <Link to={"/committee"}>
               <a
                 href="#thuqba"
                 className="block px-4 py-3 text-black hover:bg-green-600 rounded-b-md"
               >
                 Thuqba Committee
               </a>
+              </Link>
             </div>
           </li>
 

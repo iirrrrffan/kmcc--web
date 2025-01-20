@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { adminInstance } from '../../axiosInstance/admin';
+import { adminInstance } from '../../axiosInstance/Axios';
 import SideBar from '../components/Sidebar';
 import { UserDetailsModal } from '../components/Modal';
 import { FiEdit, FiTrash, FiEye } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
+    
 const UsersList = () => {
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
@@ -69,18 +69,18 @@ const UsersList = () => {
 
     return (
         <>
-            <div className='bg-green-200 min-h-screen'>
+            <div className='bg-green-700 min-h-screen'>
                 <SideBar />
                 <div className="container mx-auto px-4 py-8">
-                    <div className="flex justify-center mb-8">
-                        <input
-                            type="text"
-                            placeholder="Search by name or iqama number"
-                            className="w-1/2 sm:w-1/3 md:w-1/4 p-2 border border-green-300 rounded-lg"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-                    </div>
+                <div className="flex justify-center mb-8">
+    <input
+        type="text"
+        placeholder="Search by name or iqama number"
+        className="w-1/2 sm:w-1/3 md:w-1/4 p-3 border border-green-500 rounded-full focus:outline-none focus:ring-2 focus:ring-green-400 shadow-md transition duration-300 placeholder-gray-500 text-gray-700"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+    />
+</div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-9">
                         {users.map((user) => (
                             <div key={user._id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
