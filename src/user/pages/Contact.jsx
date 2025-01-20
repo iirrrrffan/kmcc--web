@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import UNav from "../components/UNav";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 function Contact() {
   const footerRef = useRef(null);
@@ -32,23 +33,39 @@ function Contact() {
   }, [lastScrollPosition]);
   return (
     <div className="relative">
-      <div
+      <motion.div
         className={`top-0 w-full z-50 fixed transition-transform duration-300 pt-[54px] ${
           isScrollingUp ? "-translate-y-12" : "-translate-y-full"
         }`}
+        initial={{ y: "-100%" }}
+        animate={{ y: isScrollingUp ? "0%" : "-100%" }}
+        transition={{ duration: 0.5 }}
       >
         <UNav
           scrollToFooter={() =>
             footerRef.current.scrollIntoView({ behavior: "smooth" })
           }
         />
-      </div>
-      <div className="bg-primary flex justify-center items-center w-full h-60 bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(https://www.sunergysolar.ae/wp-content/uploads/2022/03/contact-us-banner.jpg)'}}>
+      </motion.div>
+      <motion.div
+        className="bg-primary flex justify-center items-center w-full h-60 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url(https://www.sunergysolar.ae/wp-content/uploads/2022/03/contact-us-banner.jpg)",
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {/* <p className="text-7xl  text-center font-bold">contact</p> */}
-      </div>
+      </motion.div>
       <div className=" w-full  flex pl-20 pr-20  ">
         {/* leftImagesetion */}
-        <div className="w-2/5 flex justify-center items-center pl-12">
+        <motion.div className="w-2/5 flex justify-center items-center pl-12"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        >
           <div className=" p-2 h-3/4 rounded-lg overflow-hidden">
             <img
               className="h-full w-full object-cover rounded-lg"
@@ -56,14 +73,19 @@ function Contact() {
               alt="Contact Us"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* rightsectiuon */}
-        <div className="w-3/5 flex  p-10 ">
+        <motion.div className="w-3/5 flex  p-10 "
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}>
           <div className=" w-full p-10">
-            <p className="font-semibold text-7xl text-pretty italic text-center text-primary">
+            <motion.p className="font-semibold text-7xl text-pretty italic text-center text-primary" initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5 }}>
               Contact Us
-            </p>
+            </motion.p>
             <div>
               <p className="text-lg mt-1">
                 If you like to know more about our services, feel free to
@@ -75,7 +97,9 @@ function Contact() {
               </p>
             </div>
             <div>
-              <form className="space-y-6 mt-1">
+              <motion.form className="space-y-6 mt-1" initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}>
                 {/* First Name and Last Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -187,12 +211,12 @@ function Contact() {
                     Submit
                   </button>
                 </div>
-              </form>
+              </motion.form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
