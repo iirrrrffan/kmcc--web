@@ -42,7 +42,7 @@ const AboutHimaya = () => {
               <img src={dotImage} alt="dots" className="h-full" />
             </div>
             {/* Small Image */}
-            <div className="absolute -right-44 -bottom-10 z-20 border hidden md:flex border-green-500 border-t-2 border-b-0 border-r-0 border-l-2">
+            <div className="absolute -right-44 -bottom-10 z-20 border hidden md:flex border-green-800 border-t-2 border-b-0 border-r-0 border-l-2">
               <img
                 src="https://sun1-90.userapi.com/impg/i3W08NyVVPCNa-cdJTBljr-n1vwc2nA_X_gVUQ/oeJR22RKLa0.jpg?size=1024x576&quality=95&sign=458628c1fe0adbdfb5b4f5b036931fbb&c_uniq_tag=Kulci29K5wPRyLnP7IY5wxXReXaUqFboolNrQZB0grQ&type=album"
                 alt="Small image"
