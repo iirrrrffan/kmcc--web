@@ -46,10 +46,10 @@ const AboutKmcc = () => {
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h2 className="text-5xl md:text-6xl font-serif font-extrabold text-white mb-6 tracking-wider drop-shadow-lg">
+            <h2 className="text-4xl md:text-6xl font-serif text-center text-wrap   font-extrabold text-white mb-6 tracking-wider drop-shadow-lg">
             KMCC the largest expatriate organisationin the world
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light ">
+            <p className="text-sm md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light ">
             The Kerala Muslim Cultural Centre (KMCC) is an expatriate charity and volunteer organisation for expatriates from Kerala.
              Formed in 1981 as an official organisation of the All India Muslim League (AIML) under Umar Bafakhy Thangal, KMCC has promoted the welfare of expatriate Indians through relief activities, C.H. centers and social servicesKMCC has been receiving thunderous applause for its sincere efforts for the social, cultural, economical and educative upliftment of malayalees all over the world. Riyadh KMCC has been a strong and persistent activist in promoting the welfare of expatriate Indians and addressing their day-to-day issues. KMCC has a major footprint in Middle Eastern nations.
             </p>
