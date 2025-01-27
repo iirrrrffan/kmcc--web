@@ -1,0 +1,21 @@
+{
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "build": {
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      }
+    }
+  }
+  

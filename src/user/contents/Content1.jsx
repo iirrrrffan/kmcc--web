@@ -49,7 +49,7 @@ const Content1 = () => {
       >
         {contentData.map((content, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col items-center text-center p-6 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-500 hover:scale-105">
+            <div className="flex flex-col items-center text-center p-6 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-500 hover:scale-105 h-[250px] sm:h-[300px] lg:h-[200px]">
               <div className="mb-4">{content.icon}</div>
               <h3 className="text-xl font-bold text-black mb-2">
                 {content.title}
