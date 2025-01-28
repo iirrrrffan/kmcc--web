@@ -4,7 +4,7 @@ const Content2 = () => {
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-green-800 text-center">
       <h2 className="text-4xl font-extrabold text-white mb-6">
-      Himaya @ Tukhbah: Hope for bereaved families, extending a helping hand.
+      Himaya  Tukhbah Hope for bereaved families, extending a helping hand.
       </h2>
       <p className="text-lg text-white mb-6">
         Dedicating a few minutes of your time to those in need is a form of self-realization
