@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const AboutKmcc = () => {
   const [inView, setInView] = useState(false);
@@ -29,7 +28,7 @@ const AboutKmcc = () => {
 
   return (
     <>
-      {/* Section Start */}
+     
       <section
       style={{ borderRadius: "0 0 50px 50px", backgroundImage:"url(https://i.ytimg.com/vi/bNRi-dr48io/maxresdefault.jpg)",backgroundRepeat:"no-repeat",backgroundSize:'cover'}}
         id="about-kmcc"
@@ -39,7 +38,7 @@ const AboutKmcc = () => {
         <div className="global-container relative z-10 px-6 md:px-12 lg:px-20"
         >
           
-          {/* Title */}
+         
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
@@ -55,14 +54,14 @@ const AboutKmcc = () => {
             </p>
           </motion.div>
 
-          {/* Main Content */}
+          
           <motion.div
             className="text-center space-y-8 mx-auto max-w-4xl"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            {/* Highlighted Quote */}
+          
             <p className="text-3xl font-semibold text-green-400 drop-shadow-md font-serif">
               "KMCC: The world's largest expat welfare community."
             </p>
@@ -74,9 +73,11 @@ const AboutKmcc = () => {
               transformed the lives of countless expatriates by offering
               community, security, and empowerment.
             </p>
-
-            {/* Button */}
-            <Link to={"/overview"}>
+            <a
+  href="https://kmcccare.com/about"
+  target="_blank"
+  rel="noopener noreferrer"
+>
               <motion.button
                 className="relative px-12 py-4 mt-3 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-green-700 rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-110 duration-300 ease-in-out uppercase tracking-wider"
                 whileHover={{ scale: 1.1 }}
@@ -84,11 +85,11 @@ const AboutKmcc = () => {
               >
                 Learn More
               </motion.button>
-            </Link>
+              </a>
           </motion.div>
         </div>
       </section>
-      {/* Section End */}
+      
     </>
   );
 };
