@@ -28,7 +28,7 @@ const UNav = ({scrollToFooter}) => {
   className={`xl:bg-white xl:bg-opacity-10  bg-opacity-0  shadow-xl xl:mt-2 mt-[-53px] sticky z-50 text-black backdrop-blur-lg rounded-full py-2 px-6 w-full md:w-1/2 transition-transform duration-300 ${
     isScrolled ? "transform -translate-y-full" : "transform translate-y-0"
   } ${isMobileMenuOpen?"backdrop-blur-none":"backdrop-blur-lg "}`}
->
+>                                                                                                                                                                       
       <div className="container mx-auto flex md:justify-center items-center">
 
         {/* Desktop Navigation Links */}
