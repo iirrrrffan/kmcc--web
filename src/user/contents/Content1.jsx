@@ -34,27 +34,30 @@ const Content1 = () => {
   ];
 
   return (
-    <div className="relative py-12">
+    <div className="relative py-12 px-4 md:px-12 lg:px-20">
       <Swiper
-        slidesPerView={1.5}
-        spaceBetween={20}
+        slidesPerView={1}
+        spaceBetween={15}
         breakpoints={{
-          640: { slidesPerView: 2.5 },
+          480: { slidesPerView: 1.5 },
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 2.5 },
           1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 4 },
         }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         {contentData.map((content, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col items-center text-center p-6 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-500 hover:scale-105">
+            <div className="flex flex-col items-center text-center p-6 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-500 hover:scale-105 h-auto sm:h-[280px] md:h-[250px] lg:h-[220px] xl:h-[200px]">
               <div className="mb-4">{content.icon}</div>
-              <h3 className="text-xl font-bold text-black mb-2">
+              <h3 className="text-lg md:text-xl font-bold text-black mb-2">
                 {content.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 {content.description}
               </p>
             </div>
