@@ -1,12 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import bgImage from  '../../../assets/mission-bg.jpg'
+import { Link } from "react-router-dom";
 const ServiceArea = () => {
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    navigate("/log");
-  };
+  
 
   return (
     <section className="service-area h-[60vh] bg-gradient-to-t " style={{backgroundImage:`url(${bgImage})`}}>
@@ -23,24 +19,31 @@ const ServiceArea = () => {
 
               {/* Content */}
               <div className="relative z-10 text-center">
-                <h3 className="text-4xl font-semibold text-white mb-6 animate-fade-in">
-                  Thuqba Membership Status
-                </h3>
+              <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in 
+               bg-gradient-to-r from-green-600 to-green-800 inline-block 
+               px-6 py-2 rounded-lg shadow-lg tracking-wide 
+               uppercase">
+  Thuqba Membership Status
+</h3>
                 <p className="text-gray-300 text-lg mb-8 leading-relaxed animate-fade-in">
                   Ensure your loved ones in Riyadh are registered with KMCC and
                   enjoy exclusive benefits and services designed just for them.
                 </p>
 
                 {/* Centered Button */}
+                <Link to={"/log"}>
                 <div className="flex justify-center">
+                  
                   <button
-                    onClick={handleNavigation}
+                   
                     className="px-8 py-4 bg-light to-black text-white font-medium rounded-full shadow-lg hover:from-green-600 hover:to-green-800 hover:shadow-[0_4px_20px_rgba(72,255,72,0.6)] transition-transform duration-300 transform hover:scale-110 flex items-center justify-center gap-3 animate-bounce-slow"
                   >
                     <i className="fas fa-check-circle text-xl"></i>
                     Check Membership Status
                   </button>
+                  
                 </div>
+                </Link>
               </div>
             </div>
 
