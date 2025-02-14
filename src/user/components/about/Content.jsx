@@ -2,15 +2,15 @@ import React from "react";
 
 const Content = () => {
   return (
-    <div className="flex pr-10 pl-10 ">
-      <div className="w-1/2 p-20">
+    <div className="flex flex-col md:flex-row md:pr-10 md:pl-10 ">
+      <div className="md:w-1/2 md:p-20 w-full px-5">
         <img
           src="https://3blaws.s3.amazonaws.com/styles/carousel_2x/s3/images/GivingTuesdayedit_4fcd098b-f659-4ed0-828c-8f1244d98ec3-prv.jpg"
           alt=""
           className=""
         />
       </div>
-      <div className="w-1/2">
+      <div className="md:w-1/2">
         <p className="font-light text-sm leading-7 mt-4 px-6 text-start ">
           The Kerala Muslim Cultural Centre (KMCC) is an expatriate charity and
           volunteer organisation for expatriates from Kerala. Formed in 1981 as
