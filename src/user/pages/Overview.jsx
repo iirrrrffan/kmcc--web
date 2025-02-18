@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion'; // Ensure you import `motion` from `framer-motion`
 import UNav from '../components/UNav';
 import Banner from '../components/common/Banner';
@@ -7,11 +7,42 @@ import MissionVision from '../components/about/MissionVision';
 import Footer from '../components/Footer';
 
 const OverView = () => {
+   const [isScrollingUp, setIsScrollingUp] = useState(true);
+    const [lastScrollPosition, setLastScrollPosition] = useState(0);
+    const footerRef = useRef(null);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const currentScrollPosition = window.scrollY;
+  
+        // Determine scroll direction
+        if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+          setIsScrollingUp(false); // Scrolling down
+        } else {
+          setIsScrollingUp(true); // Scrolling up
+        }
+  
+        setLastScrollPosition(currentScrollPosition);
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      // Cleanup event listener on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, [lastScrollPosition]);
   return (
     <div>
-      <UNav />
+      <div
+        className={`top-0 w-full z-50 fixed transition-transform duration-300 pt-[54px] ${
+          isScrollingUp ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <UNav scrollToFooter={() => footerRef.current.scrollIntoView({ behavior: 'smooth' })} />
+      </div>
       <Banner titile="About"  Image='https://blog.se.com/wp-content/uploads/2024/01/generic_life-at-schneider-electric_GettyImages-888343166-2048x1367.jpg'/>
-      <section className="py-24 bg-gray-50">
+      <section className="md:py-24 py-4 bg-gray-50">
         <div className="global-container">
           {/* Header Section */}
           <motion.div
